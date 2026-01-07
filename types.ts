@@ -10,6 +10,7 @@ export interface Event {
   category: string;
   isLive?: boolean;
   isMainEvent?: boolean;
+  pollId?: string; // Vínculo opcional a una encuesta efímera
 }
 
 export interface Poll {

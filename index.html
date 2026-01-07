@@ -3,10 +3,13 @@
 <html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vallarta Live | Premium Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0f1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Vallarta Live | Visual Guide</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -14,48 +17,90 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            DEFAULT: '#fb923c',
-                            hover: '#f97316',
-                            subtle: 'rgba(251, 146, 60, 0.1)'
-                        },
+                        primary: '#fb923c',
                         accent: '#f43f5e',
                         background: {
-                            light: '#f8fafc',
                             dark: '#0a0f1e',
-                            surface: '#161e31',
-                            elevated: '#1e293b'
+                            surface: '#161e31'
                         }
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    animation: {
+                        'visual-pulse': 'vpulse 3s ease-in-out infinite',
+                        'reveal': 'reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+                        'float': 'float 4s ease-in-out infinite',
+                        'connector-flow': 'flow 3s linear infinite'
+                    },
+                    keyframes: {
+                        vpulse: { '0%, 100%': { opacity: '0.4', transform: 'scale(1)' }, '50%': { opacity: '0.8', transform: 'scale(1.05)' } },
+                        reveal: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                        flow: { '0%': { strokeDashoffset: '40' }, '100%': { strokeDashoffset: '0' } }
                     }
                 }
             }
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        :root {
+            --glass: rgba(10, 15, 30, 0.75);
+            --glass-light: rgba(255, 255, 255, 0.03);
+            --border-subtle: rgba(255, 255, 255, 0.1);
+            --blur-std: 28px;
         }
+
+        body { 
+            background: #0a0f1e; 
+            overscroll-behavior: none;
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+
+        .glass-pure {
+            background: var(--glass);
+            backdrop-filter: blur(var(--blur-std));
+            -webkit-backdrop-filter: blur(var(--blur-std));
+            border: 1px solid var(--border-subtle);
+        }
+
+        .glass-panel {
+            background: rgba(16, 24, 49, 0.85);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .glass-morphism {
+            background: rgba(239, 68, 68, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .img-scrim-deep {
+            background: linear-gradient(to bottom, transparent 0%, rgba(10,15,30,0.2) 40%, rgba(10,15,30,0.95) 90%, #0a0f1e 100%);
+        }
+
+        .img-scrim-top {
+            background: linear-gradient(to top, transparent 0%, rgba(10,15,30,0.7) 100%);
+        }
+
+        .active-scale:active { transform: scale(0.94); transition: transform 0.1s ease; }
+        .tap-target { min-height: 52px; min-width: 52px; display: flex; align-items: center; justify-content: center; }
+        
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        body { 
-            -webkit-tap-highlight-color: transparent; 
-            font-feature-settings: "cv02", "cv03", "cv04", "ss01";
-            background: #0a0f1e;
+
+        .map-layer-optimized {
+            transition: opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: opacity;
         }
-        .glass {
-            background: rgba(22, 30, 49, 0.75);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .sunset-gradient {
-            background: linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
-        }
-        .ocean-gradient {
-            background: linear-gradient(180deg, #0a0f1e 0%, #1e293b 100%);
+
+        .floating-connector {
+            pointer-events: none;
+            stroke: rgba(251, 146, 60, 0.2);
+            stroke-width: 2;
+            stroke-dasharray: 8 8;
         }
     </style>
 <script type="importmap">
@@ -69,7 +114,7 @@
 }
 </script>
 </head>
-<body class="text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+<body class="text-slate-100 overflow-x-hidden selection:bg-primary/30">
     <div id="root"></div>
 </body>
 </html>

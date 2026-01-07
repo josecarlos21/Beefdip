@@ -1,6 +1,6 @@
 {
-  "name": "Vallarta Live & Explorer",
-  "description": "A high-energy event guide for Puerto Vallarta featuring real-time crowd density, ephemeral polls, itinerary management, and emergency safety tools.",
+  "name": "Vallarta Live | Visual Experience",
+  "description": "Premium Image-First event guide for Puerto Vallarta featuring immersive video backgrounds, high-fidelity mapping, and bio-motor wellness tracking.",
   "requestFramePermissions": [
     "geolocation"
   ]

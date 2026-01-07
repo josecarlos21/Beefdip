@@ -6,100 +6,71 @@ import BottomNav from '../components/BottomNav';
 const About: React.FC = () => {
   const navigate = useNavigate();
 
+  const hospitals = [
+    { name: 'Hospital CMQ Premiere', dist: '1.2 km', tel: '322 226 6500' },
+    { name: 'Hospital San Javier', dist: '3.5 km', tel: '322 226 1010' }
+  ];
+
   return (
-    <div className="pb-40 bg-background-dark min-h-screen font-sans overflow-x-hidden">
-      {/* VENTANA SOCIAL - CABECERA CON IMAGEN */}
-      <div className="relative h-64 w-full">
-        <img 
-          src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=1000" 
-          className="w-full h-full object-cover"
-          alt="Social Cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
-        
-        {/* APP ICON OVERLAY */}
-        <div className="absolute -bottom-10 left-6 flex items-end gap-5">
-           <div className="w-28 h-28 sunset-gradient rounded-[2.5rem] border-[6px] border-background-dark shadow-2xl flex items-center justify-center rotate-6 relative z-10">
-              <span className="material-symbols-outlined text-white text-5xl">local_fire_department</span>
-           </div>
-           <div className="pb-12">
-              <h1 className="text-2xl font-black text-white uppercase italic tracking-tighter">Vallarta<span className="text-primary">Live</span></h1>
-              <div className="flex items-center gap-2 mt-0.5">
-                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                 <p className="text-[10px] font-black text-white/50 uppercase tracking-widest">v2.5.0 Premium</p>
-              </div>
-           </div>
-        </div>
-      </div>
+    <div className="pb-44 bg-background-dark min-h-screen">
+      <header className="px-8 pt-16 pb-8">
+        <h1 className="text-3xl font-black text-white uppercase italic tracking-tighter">Utilidades</h1>
+        <p className="text-[9px] text-primary font-black mt-1 uppercase tracking-[0.4em] italic">Servicios y Soporte</p>
+      </header>
 
-      <main className="px-6 mt-20 space-y-10">
-        {/* BOTONES DE ACCIÓN RÁPIDA - INTEGRADOS Y ESTILIZADOS */}
-        <div className="flex gap-4 p-1 glass rounded-[2.5rem] border-white/10 shadow-xl">
-           <button 
-             onClick={() => navigate('/emergency')}
-             className="flex-1 h-24 bg-red-600/10 hover:bg-red-600/20 rounded-[2.2rem] flex flex-col items-center justify-center gap-2 active:scale-95 transition-all group border border-red-500/20"
-           >
-              <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform">
-                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>emergency</span>
-              </div>
-              <span className="text-[10px] font-black text-red-500 uppercase tracking-widest">S.O.S</span>
-           </button>
-           
-           <button className="flex-1 h-24 bg-amber-500/10 hover:bg-amber-500/20 rounded-[2.2rem] flex flex-col items-center justify-center gap-2 active:scale-95 transition-all group border border-amber-500/20">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-amber-600/30 group-hover:scale-110 transition-transform">
-                 <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
-              </div>
-              <span className="text-[10px] font-black text-amber-500 uppercase tracking-widest">Donar</span>
-           </button>
+      <main className="px-8 space-y-10">
+        {/* Acciones Rápidas */}
+        <div className="grid grid-cols-2 gap-4">
+          <button onClick={() => navigate('/emergency')} className="h-28 bg-red-600/10 rounded-3xl flex flex-col items-center justify-center gap-2 border border-red-500/20 active-scale">
+            <span className="material-symbols-outlined text-red-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>emergency</span>
+            <span className="text-[9px] font-black text-red-500 uppercase tracking-widest italic">S.O.S Botón</span>
+          </button>
+          <button className="h-28 bg-amber-500/10 rounded-3xl flex flex-col items-center justify-center gap-2 border border-amber-500/20 active-scale">
+            <span className="material-symbols-outlined text-amber-500 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
+            <span className="text-[9px] font-black text-amber-500 uppercase tracking-widest italic">Donaciones</span>
+          </button>
         </div>
 
-        {/* LISTA DE CONFIGURACIÓN */}
-        <div className="space-y-6">
-           <div className="space-y-3">
-              <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] px-2 italic">Ajustes de Usuario</h3>
-              <div className="glass rounded-[2.5rem] overflow-hidden border border-white/5 shadow-lg">
-                {[
-                  { label: 'Mi Perfil', icon: 'person_outline', color: 'text-blue-400' },
-                  { label: 'Preferencias', icon: 'tune', color: 'text-amber-400' },
-                  { label: 'Notificaciones', icon: 'notifications_none', color: 'text-pink-400' },
-                  { label: 'Seguridad', icon: 'verified_user', color: 'text-emerald-400' }
-                ].map((item, idx, arr) => (
-                  <button 
-                    key={item.label}
-                    className={`w-full p-6 flex items-center justify-between hover:bg-white/5 transition-colors ${idx !== arr.length - 1 ? 'border-b border-white/5' : ''}`}
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-white/5`}>
-                        <span className={`material-symbols-outlined ${item.color} text-2xl`}>{item.icon}</span>
-                      </div>
-                      <span className="text-sm font-bold text-white uppercase tracking-tight">{item.label}</span>
-                    </div>
-                    <span className="material-symbols-outlined text-slate-700">chevron_right</span>
-                  </button>
-                ))}
+        {/* Hospitales */}
+        <section className="space-y-4">
+          <h3 className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em] px-1 italic">Hospitales Recomendados</h3>
+          <div className="glass-pure rounded-3xl overflow-hidden border border-white/5 divide-y divide-white/5">
+            {hospitals.map(h => (
+              <div key={h.name} className="p-4 flex justify-between items-center bg-white/[0.02]">
+                <div>
+                  <p className="text-xs font-black text-white uppercase italic">{h.name}</p>
+                  <p className="text-[8px] font-bold text-white/20 uppercase mt-1 italic">{h.dist} • {h.tel}</p>
+                </div>
+                <button className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center active-scale">
+                  <span className="material-symbols-outlined text-lg text-white/60">call</span>
+                </button>
               </div>
-           </div>
+            ))}
+          </div>
+        </section>
 
-           <div className="space-y-3">
-              <h3 className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] px-2 italic">Comunidad</h3>
-              <div className="flex justify-between gap-3">
-                 {[
-                   { icon: 'facebook', color: 'hover:text-blue-500' },
-                   { icon: 'instagram', color: 'hover:text-pink-500' },
-                   { icon: 'twitter', color: 'hover:text-sky-400' },
-                   { icon: 'share', color: 'hover:text-primary' }
-                 ].map(social => (
-                   <button key={social.icon} className={`flex-1 h-14 glass rounded-2xl flex items-center justify-center text-slate-400 ${social.color} transition-all active:scale-95 border-white/5`}>
-                      <span className="material-symbols-outlined text-xl">{social.icon === 'share' ? 'ios_share' : social.icon}</span>
-                   </button>
-                 ))}
-              </div>
-           </div>
+        {/* Sobre Mí */}
+        <section className="space-y-4">
+          <h3 className="text-[9px] font-black text-white/30 uppercase tracking-[0.2em] px-1 italic">Sobre la App</h3>
+          <div className="glass-pure rounded-3xl p-6 border border-white/5 bg-gradient-to-br from-white/[0.03] to-transparent">
+             <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+                   <span className="material-symbols-outlined text-primary">person</span>
+                </div>
+                <div>
+                   <p className="text-xs font-black text-white uppercase italic">Hecho por un Local</p>
+                   <p className="text-[8px] font-bold text-white/30 uppercase italic">Vallarta Live Dev Core</p>
+                </div>
+             </div>
+             <p className="text-[10px] text-white/50 leading-relaxed italic uppercase font-bold tracking-tight">
+               Diseñé esta app para que navegues Puerto Vallarta con inteligencia. Sin protocolos aburridos, solo lo que necesitas: buenos eventos, salud y seguridad.
+             </p>
+          </div>
+        </section>
+
+        <div className="text-center pt-4 opacity-10">
+           <p className="text-[7px] font-black text-white uppercase tracking-[0.8em] italic">VALLARTA LIVE // V.3.6</p>
         </div>
-
-        <p className="text-center text-[10px] font-black text-slate-700 uppercase tracking-[0.4em] italic pt-10 pb-4">
-           Pulsando con el ❤️ de Vallarta
-        </p>
       </main>
 
       <BottomNav />

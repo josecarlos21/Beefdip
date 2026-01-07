@@ -12,7 +12,8 @@ export const EVENTS: Event[] = [
     image: 'https://picsum.photos/seed/whiteparty/800/600',
     category: 'Night Party',
     isLive: false,
-    isMainEvent: true
+    isMainEvent: true,
+    pollId: 'p1'
   },
   {
     id: 'EVT0114',
@@ -23,7 +24,8 @@ export const EVENTS: Event[] = [
     price: 'Gold Pass',
     image: 'https://picsum.photos/seed/foam/800/600',
     category: 'Pool Party',
-    isLive: true
+    isLive: true,
+    pollId: 'p2'
   },
   {
     id: 'EVT0003',
@@ -68,7 +70,15 @@ export const POLLS: Poll[] = [
     question: '¿Cúal es tu DJ favorito de esta semana?',
     options: [
       { id: 'o1', text: 'Tracy Young', icon: 'music_note', votes: 62, color: 'bg-primary' },
-      { id: 'o2', text: 'Chris Cox', icon: 'music_note', votes: 38, color: 'bg-slate-400' }
+      { id: 'o2', text: 'Chris Cox', icon: 'music_note', votes: 38, color: 'bg-slate-500' }
+    ]
+  },
+  {
+    id: 'p2',
+    question: '¿Cómo está la temperatura del agua?',
+    options: [
+      { id: 'o3', text: 'Perfecta', icon: 'thermometer', votes: 85, color: 'bg-cyan-400' },
+      { id: 'o4', text: 'Muy Fría', icon: 'ac_unit', votes: 15, color: 'bg-blue-600' }
     ]
   }
 ];

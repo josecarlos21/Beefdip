@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import BottomNav from '../components/BottomNav';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,80 +8,67 @@ const Itinerary: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(2);
 
   return (
-    <div className="pb-40 min-h-screen bg-background-dark font-sans">
-      <header className="px-6 pt-12 pb-6">
-        <h1 className="text-3xl font-black text-white tracking-tighter uppercase italic">Mi Agenda</h1>
-        <p className="text-[10px] text-primary font-black mt-1 uppercase tracking-[0.25em]">Planner Oficial 2026</p>
+    <div className="pb-44 min-h-screen bg-background-dark overflow-x-hidden">
+      <header className="px-8 pt-16 pb-6 flex justify-between items-end">
+        <div>
+          <h1 className="text-2xl font-black text-white uppercase italic tracking-tighter">Mi Agenda</h1>
+          <p className="text-[9px] text-white/30 font-bold mt-1 uppercase tracking-widest italic">Puerto Vallarta 2026</p>
+        </div>
+        <div className="w-10 h-10 glass-pure rounded-xl flex items-center justify-center border-white/5">
+           <span className="material-symbols-outlined text-white/40 text-xl">event</span>
+        </div>
       </header>
 
-      <main className="px-6 space-y-8">
-        {/* Selector de Fecha Serio */}
-        <div className="flex gap-4 overflow-x-auto hide-scrollbar -mx-6 px-6">
+      <main className="px-8 space-y-6">
+        <div className="flex gap-2 overflow-x-auto hide-scrollbar -mx-8 px-8">
           {[1, 2, 3, 4, 5, 6].map(day => (
             <button 
               key={day} 
               onClick={() => setSelectedDay(day)}
-              className={`min-w-[4rem] flex flex-col items-center py-4 rounded-2xl transition-all border ${selectedDay === day ? 'bg-primary border-primary text-white shadow-xl shadow-primary/20' : 'glass border-white/5 text-slate-500'}`}
+              className={`min-w-[3rem] py-3 rounded-xl transition-all border ${selectedDay === day ? 'bg-primary border-primary text-white shadow-lg' : 'glass-pure border-white/5 text-white/30'}`}
             >
-              <span className="text-[9px] font-black uppercase tracking-widest mb-1 opacity-70">FEB</span>
-              <span className="text-xl font-bold">{day + 10}</span>
+              <span className="text-[7px] font-black uppercase mb-0.5 block italic">FEB</span>
+              <span className="text-base font-black italic">{day + 10}</span>
             </button>
           ))}
         </div>
 
-        {/* Timeline Refinado */}
-        <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Actividades del Día</h3>
-            <span className="text-[9px] font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">3 Confirmados</span>
-          </div>
-
-          <div className="relative pl-4 space-y-8">
-            {/* Línea de conexión minimalista */}
-            <div className="absolute left-[7px] top-2 bottom-2 w-px bg-white/10"></div>
-
-            {/* Item 1 */}
-            <div className="relative pl-8">
-              <div className="absolute left-0 top-1 w-4 h-4 rounded-full glass border-primary/50 flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-              </div>
-              <div onClick={() => navigate('/event/EVT0114')} className="glass rounded-3xl p-5 flex gap-4 items-center active:scale-[0.98] transition-all">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0">
-                  <img src="https://picsum.photos/seed/ev1/200" className="w-full h-full object-cover grayscale-[0.3]" alt="Event" />
+        <div className="space-y-4">
+          <div className="relative pl-6">
+            <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-white/5"></div>
+            
+            <div className="relative mb-6 animate-reveal">
+              <div className="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-primary border-2 border-background-dark"></div>
+              <div onClick={() => navigate('/event/EVT0114')} className="glass-pure rounded-2xl p-3 flex gap-4 items-center active-scale border-white/10">
+                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0">
+                  <img src="https://picsum.photos/seed/ev1/200" className="w-full h-full object-cover" alt="" />
                 </div>
-                <div className="flex-1">
-                  <span className="text-[9px] font-bold text-primary uppercase">12:00 PM</span>
-                  <h4 className="text-base font-black text-white uppercase tracking-tight leading-tight">Foam Party Mantamar</h4>
-                  <p className="text-[10px] text-slate-500 uppercase mt-1">Playa Los Muertos</p>
+                <div className="flex-1 min-w-0">
+                  <span className="text-[7px] font-black text-primary uppercase italic">12:00 PM</span>
+                  <h4 className="text-sm font-black text-white uppercase italic leading-none truncate mt-0.5">Foam Pool Party</h4>
+                  <p className="text-[7px] text-white/30 uppercase mt-1 truncate">Blue Chairs Resort</p>
                 </div>
               </div>
             </div>
 
-            {/* Item 2 */}
-            <div className="relative pl-8 opacity-60">
-              <div className="absolute left-0 top-1 w-4 h-4 rounded-full glass border-white/20 flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-              </div>
-              <div className="glass rounded-3xl p-5 flex gap-4 items-center">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0 grayscale">
-                  <img src="https://picsum.photos/seed/ev2/200" className="w-full h-full object-cover" alt="Event" />
+            <div className="relative opacity-50">
+              <div className="absolute -left-[6px] top-1.5 w-3 h-3 rounded-full bg-white/10 border-2 border-background-dark"></div>
+              <div className="glass-pure rounded-2xl p-3 flex gap-4 items-center border-white/5">
+                <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 grayscale opacity-40">
+                  <img src="https://picsum.photos/seed/ev2/200" className="w-full h-full object-cover" alt="" />
                 </div>
-                <div className="flex-1">
-                  <span className="text-[9px] font-bold text-slate-400 uppercase">18:30 PM</span>
-                  <h4 className="text-base font-black text-white uppercase tracking-tight leading-tight">Sunset Cocktails</h4>
-                  <p className="text-[10px] text-slate-500 uppercase mt-1">The Blue Chairs</p>
+                <div className="flex-1 min-w-0">
+                  <span className="text-[7px] font-black text-white/20 uppercase italic">22:00 PM</span>
+                  <h4 className="text-sm font-black text-white/40 uppercase italic mt-0.5 truncate">White Party</h4>
                 </div>
               </div>
-            </div>
-
-            {/* Botón Añadir Minimalista */}
-            <div className="relative pl-8">
-               <button className="w-full p-6 border border-dashed border-white/10 rounded-3xl flex items-center justify-center gap-2 group hover:border-primary/50 transition-colors">
-                  <span className="material-symbols-outlined text-slate-500 group-hover:text-primary">add_circle</span>
-                  <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Añadir Evento</span>
-               </button>
             </div>
           </div>
+
+          <button className="w-full p-4 border border-dashed border-white/10 rounded-2xl flex items-center justify-center gap-2 group hover:border-primary/40 transition-all active-scale">
+            <span className="material-symbols-outlined text-white/20 text-lg">add_circle</span>
+            <span className="text-[8px] font-black text-white/20 uppercase tracking-widest italic">Añadir Evento</span>
+          </button>
         </div>
       </main>
 
