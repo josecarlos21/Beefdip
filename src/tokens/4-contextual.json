@@ -1,0 +1,17 @@
+{
+  "theme": {
+    "light": {
+      "color": {
+        "bg": {
+          "default": { "$value": "{color.palette.slate.50}", "$type": "color" },
+          "surface": { "$value": "{color.palette.white}", "$type": "color" },
+          "surface-elevated": { "$value": "{color.palette.slate.50}", "$type": "color" }
+        },
+        "text": {
+          "default": { "$value": "{color.palette.slate.900}", "$type": "color" },
+          "muted": { "$value": "{color.palette.slate.600}", "$type": "color" }
+        }
+      }
+    }
+  }
+}

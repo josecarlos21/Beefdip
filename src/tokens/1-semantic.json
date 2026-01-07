@@ -1,0 +1,21 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "$value": "{color.palette.orange.500}", "$type": "color" },
+      "primary-hover": { "$value": "{color.palette.orange.600}", "$type": "color" },
+      "primary-subtle": { "$value": "{color.palette.orange.subtle}", "$type": "color" },
+      "accent": { "$value": "{color.palette.rose.500}", "$type": "color" }
+    },
+    "bg": {
+      "default": { "$value": "{color.palette.slate.900}", "$type": "color" },
+      "surface": { "$value": "{color.palette.slate.950}", "$type": "color" },
+      "surface-elevated": { "$value": "{color.palette.slate.800}", "$type": "color" },
+      "light": { "$value": "{color.palette.slate.50}", "$type": "color" }
+    },
+    "text": {
+      "default": { "$value": "{color.palette.slate.50}", "$type": "color" },
+      "muted": { "$value": "{color.palette.slate.400}", "$type": "color" },
+      "inverse": { "$value": "{color.palette.slate.900}", "$type": "color" }
+    }
+  }
+}

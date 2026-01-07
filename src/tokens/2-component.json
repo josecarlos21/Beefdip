@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "bg": { "$value": "rgba(22, 30, 49, 0.75)", "$type": "color" },
+    "border": { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
+    "radius": { "$value": "{size.radius.xl}", "$type": "dimension" }
+  },
+  "card": {
+    "bg": { "$value": "{color.bg.surface}", "$type": "color" }
+  }
+}

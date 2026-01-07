@@ -9,27 +9,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script>
+        // Mapping tokens manually since we can't import JSON here easily without build
+        // Level 0 - Atomic
+        const atomic = {
+            colors: {
+                orange: { 500: '#fb923c', 600: '#f97316' },
+                slate: { 50: '#f8fafc', 400: '#94a3b8', 600: '#475569', 800: '#1e293b', 900: '#0a0f1e', 950: '#161e31' },
+                rose: { 500: '#f43f5e' },
+                white: '#ffffff'
+            }
+        };
+
+        // Level 1 - Semantic
+        const semantic = {
+            colors: {
+                primary: {
+                    DEFAULT: atomic.colors.orange[500],
+                    hover: atomic.colors.orange[600],
+                    subtle: 'rgba(251, 146, 60, 0.1)'
+                },
+                accent: atomic.colors.rose[500],
+                background: {
+                    light: atomic.colors.slate[50],
+                    dark: atomic.colors.slate[900], // Default bg
+                    surface: atomic.colors.slate[950], // Cards
+                    elevated: atomic.colors.slate[800]
+                },
+                text: {
+                    default: atomic.colors.slate[50],
+                    muted: atomic.colors.slate[400]
+                }
+            }
+        };
+
+        // Level 2 - Component (Exposed as utilities or extended theme)
+        const component = {
+            nav: {
+                bg: 'rgba(22, 30, 49, 0.75)',
+                border: 'rgba(255, 255, 255, 0.08)'
+            }
+        };
+
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: {
-                            DEFAULT: '#fb923c',
-                            hover: '#f97316',
-                            subtle: 'rgba(251, 146, 60, 0.1)'
-                        },
-                        accent: '#f43f5e',
-                        background: {
-                            light: '#f8fafc',
-                            dark: '#0a0f1e',
-                            surface: '#161e31',
-                            elevated: '#1e293b'
-                        }
+                        // Semantic Colors
+                        primary: semantic.colors.primary,
+                        accent: semantic.colors.accent,
+                        background: semantic.colors.background,
+                        // Component Colors (mapped to semantic/atomic or custom)
+                        nav: component.nav,
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '2.5rem' // Matches token size.radius.xl
                     }
                 }
             }
@@ -44,18 +82,19 @@
         body { 
             -webkit-tap-highlight-color: transparent; 
             font-feature-settings: "cv02", "cv03", "cv04", "ss01";
-            background: #0a0f1e;
+            background: #0a0f1e; /* Fallback */
+            background-color: theme('colors.background.dark');
         }
         .glass {
-            background: rgba(22, 30, 49, 0.75);
+            background: var(--nav-bg, rgba(22, 30, 49, 0.75));
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--nav-border, rgba(255, 255, 255, 0.08));
         }
-        .sunset-gradient {
-            background: linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
-        }
-        .ocean-gradient {
-            background: linear-gradient(180deg, #0a0f1e 0%, #1e293b 100%);
+
+        /* Token-driven variables for Glass */
+        :root {
+            --nav-bg: rgba(22, 30, 49, 0.75);
+            --nav-border: rgba(255, 255, 255, 0.08);
         }
     </style>
 <script type="importmap">
@@ -69,7 +108,7 @@
 }
 </script>
 </head>
-<body class="text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+<body class="text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden bg-background-dark">
     <div id="root"></div>
 </body>
 </html>

@@ -1,0 +1,38 @@
+{
+  "color": {
+    "palette": {
+      "orange": {
+        "500": { "$value": "#fb923c", "$type": "color" },
+        "600": { "$value": "#f97316", "$type": "color" },
+        "subtle": { "$value": "rgba(251, 146, 60, 0.1)", "$type": "color" }
+      },
+      "slate": {
+        "50": { "$value": "#f8fafc", "$type": "color" },
+        "400": { "$value": "#94a3b8", "$type": "color" },
+        "600": { "$value": "#475569", "$type": "color" },
+        "800": { "$value": "#1e293b", "$type": "color" },
+        "900": { "$value": "#0a0f1e", "$type": "color" },
+        "950": { "$value": "#161e31", "$type": "color" }
+      },
+      "rose": {
+        "500": { "$value": "#f43f5e", "$type": "color" }
+      },
+      "white": { "$value": "#ffffff", "$type": "color" }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": { "$value": "Inter, sans-serif", "$type": "fontFamily" },
+      "display": { "$value": "Plus Jakarta Sans, sans-serif", "$type": "fontFamily" }
+    }
+  },
+  "size": {
+    "radius": {
+      "xl": { "$value": "2.5rem", "$type": "dimension" },
+      "full": { "$value": "9999px", "$type": "dimension" }
+    },
+    "spacing": {
+      "nav": { "$value": "3.5rem", "$type": "dimension" }
+    }
+  }
+}
