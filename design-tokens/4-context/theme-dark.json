@@ -1,0 +1,16 @@
+{
+  "context": {
+    "dark": {
+      "semantic": {
+        "color": {
+          "background": {
+            "default": { "$value": "{color.base.gray.900}", "$type": "color" }
+          },
+          "text": {
+            "primary": { "$value": "{color.base.white}", "$type": "color" }
+          }
+        }
+      }
+    }
+  }
+}

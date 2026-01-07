@@ -1,0 +1,18 @@
+{
+  "semantic": {
+    "color": {
+      "primary": { "$value": "{color.base.blue.500}", "$type": "color" },
+      "background": {
+        "default": { "$value": "{color.base.white}", "$type": "color" },
+        "dark": { "$value": "{color.base.gray.900}", "$type": "color" }
+      },
+      "text": {
+        "primary": { "$value": "{color.base.gray.900}", "$type": "color" },
+        "inverse": { "$value": "{color.base.white}", "$type": "color" }
+      },
+      "status": {
+        "error": { "$value": "{color.base.red.500}", "$type": "color" }
+      }
+    }
+  }
+}

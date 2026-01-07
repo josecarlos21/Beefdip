@@ -1,0 +1,42 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+  --color-base-gray-50: #f9fafb;
+  --color-base-gray-100: #f3f4f6;
+  --color-base-gray-200: #e5e7eb;
+  --color-base-gray-300: #d1d5db;
+  --color-base-gray-400: #9ca3af;
+  --color-base-gray-500: #6b7280;
+  --color-base-gray-600: #4b5563;
+  --color-base-gray-700: #374151;
+  --color-base-gray-800: #1f2937;
+  --color-base-gray-900: #111827;
+  --color-base-blue-500: #3b82f6;
+  --color-base-red-500: #ef4444;
+  --font-family-sans: Inter, sans-serif;
+  --font-family-mono: monospace;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --semantic-color-primary: #3b82f6;
+  --semantic-color-background-default: #ffffff;
+  --semantic-color-background-dark: #111827;
+  --semantic-color-text-primary: #111827;
+  --semantic-color-text-inverse: #ffffff;
+  --semantic-color-status-error: #ef4444;
+  --component-button-bg-primary: #3b82f6;
+  --component-button-text-primary: #ffffff;
+  --component-button-padding-default: 0.5rem 1rem;
+  --pattern-card-container-bg: #ffffff;
+  --pattern-card-container-radius: 0.5rem;
+  --pattern-card-container-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --context-dark-semantic-color-background-default: #111827;
+  --context-dark-semantic-color-text-primary: #ffffff;
+}

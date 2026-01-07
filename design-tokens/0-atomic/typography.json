@@ -1,0 +1,18 @@
+{
+  "font": {
+    "family": {
+      "sans": { "$value": "Inter, sans-serif", "$type": "fontFamily" },
+      "mono": { "$value": "monospace", "$type": "fontFamily" }
+    },
+    "weight": {
+      "regular": { "$value": 400, "$type": "fontWeight" },
+      "bold": { "$value": 700, "$type": "fontWeight" }
+    },
+    "size": {
+      "sm": { "$value": "0.875rem", "$type": "dimension" },
+      "base": { "$value": "1rem", "$type": "dimension" },
+      "lg": { "$value": "1.125rem", "$type": "dimension" },
+      "xl": { "$value": "1.25rem", "$type": "dimension" }
+    }
+  }
+}

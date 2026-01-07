@@ -1,0 +1,15 @@
+{
+  "component": {
+    "button": {
+      "bg": {
+        "primary": { "$value": "{semantic.color.primary}", "$type": "color" }
+      },
+      "text": {
+        "primary": { "$value": "{semantic.color.text.inverse}", "$type": "color" }
+      },
+      "padding": {
+        "default": { "$value": "0.5rem 1rem", "$type": "dimension" }
+      }
+    }
+  }
+}
