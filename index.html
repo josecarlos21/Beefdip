@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallarta Live | Premium Guide</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#fb923c',
+                            hover: '#f97316',
+                            subtle: 'rgba(251, 146, 60, 0.1)'
+                        },
+                        accent: '#f43f5e',
+                        background: {
+                            light: '#f8fafc',
+                            dark: '#0a0f1e',
+                            surface: '#161e31',
+                            elevated: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { 
+            -webkit-tap-highlight-color: transparent; 
+            font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+            background: #0a0f1e;
+        }
+        .glass {
+            background: rgba(22, 30, 49, 0.75);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .sunset-gradient {
+            background: linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
+        }
+        .ocean-gradient {
+            background: linear-gradient(180deg, #0a0f1e 0%, #1e293b 100%);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
+  }
+}
+</script>
+</head>
+<body class="text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>

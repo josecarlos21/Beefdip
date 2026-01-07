@@ -1,0 +1,7 @@
+{
+  "name": "Vallarta Live & Explorer",
+  "description": "A high-energy event guide for Puerto Vallarta featuring real-time crowd density, ephemeral polls, itinerary management, and emergency safety tools.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
