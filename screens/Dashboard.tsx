@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background-dark pb-44 overflow-x-hidden">
+    <div className="min-h-screen bg-background-default pb-44 overflow-x-hidden">
       {/* IMMERSIVE HERO AREA */}
       <section className="relative h-[85vh] w-full overflow-hidden">
         <video 
@@ -75,7 +75,7 @@ const Dashboard: React.FC = () => {
                 </div>
               ))}
            </Link>
-           <Link to="/map" className="w-26 h-26 bg-primary rounded-full flex items-center justify-center shadow-[0_20px_80px_rgba(251,146,60,0.4)] border-[8px] border-background-dark active-scale animate-float">
+           <Link to="/map" className="w-26 h-26 bg-primary rounded-full flex items-center justify-center shadow-[0_20px_80px_rgba(251,146,60,0.4)] border-[8px] border-background-default active-scale animate-float">
               <span className="material-symbols-outlined text-white text-[48px]" style={{ fontVariationSettings: "'FILL' 1" }}>near_me</span>
               <div className="absolute inset-0 rounded-full border border-white/20 animate-visual-pulse"></div>
            </Link>
@@ -100,7 +100,7 @@ const Dashboard: React.FC = () => {
                 className="relative min-w-[300px] h-[400px] rounded-[4rem] overflow-hidden group shadow-2xl active-scale border border-white/5"
               >
                 <img src={event.image} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background-default/95 via-transparent to-transparent"></div>
                 <div className="absolute bottom-10 left-10 right-10">
                    <div className="flex items-center gap-2 mb-3">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>

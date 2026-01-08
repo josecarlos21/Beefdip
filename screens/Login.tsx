@@ -7,7 +7,7 @@ const Login: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background-dark flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-background-default flex flex-col relative overflow-hidden">
       {/* Background Video Layer */}
       <div className="absolute inset-0 z-0">
         <video 
@@ -65,7 +65,7 @@ const Login: React.FC = () => {
           
           <button 
             type="submit"
-            className="w-full h-22 bg-white text-background-dark font-black text-sm rounded-[2.5rem] shadow-2xl transition-all active-scale flex items-center justify-center gap-4 uppercase tracking-[0.2em] group"
+            className="w-full h-22 bg-white text-background-default font-black text-sm rounded-[2.5rem] shadow-2xl transition-all active-scale flex items-center justify-center gap-4 uppercase tracking-[0.2em] group"
           >
             Iniciando Protocolo
             <span className="material-symbols-outlined text-3xl group-hover:translate-x-3 transition-transform">bolt</span>

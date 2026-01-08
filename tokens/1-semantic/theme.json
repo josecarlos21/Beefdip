@@ -1,0 +1,21 @@
+{
+  "color": {
+    "primary": { "value": "{color.base.orange.400}", "type": "color" },
+    "accent": { "value": "{color.base.rose.500}", "type": "color" },
+    "background": {
+      "default": { "value": "{color.base.dark.deep}", "type": "color" },
+      "surface": { "value": "{color.base.dark.surface}", "type": "color" },
+      "card": { "value": "{color.base.dark.overlay}", "type": "color" }
+    },
+    "text": {
+      "primary": { "value": "{color.base.slate.50}", "type": "color" },
+      "secondary": { "value": "{color.base.slate.200}", "type": "color" },
+      "muted": { "value": "rgba(255,255,255,0.4)", "type": "color" }
+    }
+  },
+  "animation": {
+    "visual-pulse": { "value": "vpulse 3s ease-in-out infinite", "type": "custom" },
+    "reveal": { "value": "reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards", "type": "custom" },
+    "float": { "value": "float 4s ease-in-out infinite", "type": "custom" }
+  }
+}

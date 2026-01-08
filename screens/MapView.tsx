@@ -59,7 +59,7 @@ const MapView: React.FC = () => {
         <button className="w-10 h-10 glass-pure rounded-xl flex items-center justify-center text-white/40 active-scale border-white/5">
           <span className="material-symbols-outlined text-lg">layers</span>
         </button>
-        <button className="w-10 h-10 bg-white text-background-dark rounded-xl flex items-center justify-center active-scale shadow-2xl">
+        <button className="w-10 h-10 bg-white text-background-default rounded-xl flex items-center justify-center active-scale shadow-2xl">
           <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>my_location</span>
         </button>
       </div>

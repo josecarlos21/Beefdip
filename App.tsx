@@ -14,7 +14,7 @@ import Wellness from './screens/Hydration'; // Importamos Hydration como Wellnes
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="max-w-md mx-auto min-h-screen relative shadow-2xl overflow-x-hidden bg-background-dark">
+      <div className="max-w-md mx-auto min-h-screen relative shadow-2xl overflow-x-hidden bg-background-default">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
