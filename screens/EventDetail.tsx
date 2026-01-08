@@ -20,7 +20,7 @@ const EventDetail: React.FC = () => {
   }, []);
 
   return (
-    <div className="pb-32 min-h-screen bg-background-light dark:bg-background-dark font-sans relative">
+    <div className="pb-32 min-h-screen bg-background-dark font-sans relative">
       {/* High Energy Immersive Hero */}
       <section className="relative h-[520px] w-full overflow-hidden">
         <img 
@@ -39,7 +39,7 @@ const EventDetail: React.FC = () => {
             <div className="bg-red-600 px-3 py-1 rounded-full flex items-center gap-2 shadow-lg shadow-red-600/30">
               <span className="text-white text-[10px] font-black tracking-widest uppercase animate-pulse">Live</span>
             </div>
-            <button className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/10">
+            <button className="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-slate-700 border border-white/40 is-inactive" aria-disabled="true">
               <span className="material-symbols-outlined text-lg">share</span>
             </button>
           </div>
@@ -85,7 +85,7 @@ const EventDetail: React.FC = () => {
                     Detectamos una zona con 40% menos de densidad y vista directa al DJ Booth.
                   </p>
                 </div>
-                <button className="w-full bg-primary text-white text-xs font-black py-4 rounded-2xl uppercase tracking-[0.2em] shadow-xl shadow-primary/20 active:scale-95 transition-all">
+                <button className="w-full bg-primary text-white text-xs font-black py-4 rounded-2xl uppercase tracking-[0.2em] shadow-xl shadow-primary/20 active:scale-95 transition-all is-inactive" aria-disabled="true" type="button">
                   Navegar a la Zona
                 </button>
              </div>
@@ -96,21 +96,21 @@ const EventDetail: React.FC = () => {
       <main className="px-5 -mt-6 relative z-20 space-y-6">
         {/* Quick Stats Grid */}
         <section className="grid grid-cols-3 gap-3">
-          <Link to="/hydration" className="bg-blue-600 rounded-3xl h-36 flex flex-col justify-between p-5 text-white shadow-lg shadow-blue-600/20 active:scale-95 transition-all">
+          <Link to="/hydration" className="bg-blue-600 rounded-3xl h-36 flex flex-col justify-between p-5 text-white shadow-lg shadow-blue-600/20 active:scale-95 transition-all hover:-translate-y-1">
             <span className="material-symbols-outlined">water_drop</span>
             <div>
               <p className="text-[10px] font-black uppercase tracking-widest">Agua</p>
               <p className="text-xl font-black">{waterLevel}%</p>
             </div>
           </Link>
-          <Link to="/map" className="bg-white dark:bg-background-surface rounded-3xl h-36 flex flex-col justify-between p-5 dark:text-white border border-gray-100 dark:border-white/5 shadow-sm active:scale-95 transition-all">
+          <Link to="/map" className="bg-background-surface rounded-3xl h-36 flex flex-col justify-between p-5 border border-gray-100 shadow-sm active:scale-95 transition-all hover:-translate-y-1">
             <span className="material-symbols-outlined text-primary">explore</span>
             <div>
               <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Ubicación</p>
-              <p className="text-sm font-black uppercase leading-none">Cerca Stage</p>
+              <p className="text-sm font-black uppercase leading-none text-slate-900">Cerca Stage</p>
             </div>
           </Link>
-          <Link to="/emergency" className="bg-red-600 rounded-3xl h-36 flex flex-col justify-between p-5 text-white shadow-lg shadow-red-600/20 active:scale-95 transition-all">
+          <Link to="/emergency" className="bg-red-600 rounded-3xl h-36 flex flex-col justify-between p-5 text-white shadow-lg shadow-red-600/20 active:scale-95 transition-all hover:-translate-y-1">
             <span className="material-symbols-outlined">sos</span>
             <div>
               <p className="text-[10px] font-black uppercase tracking-widest">Ayuda</p>
@@ -120,28 +120,28 @@ const EventDetail: React.FC = () => {
         </section>
 
         {/* Event Meta Card */}
-        <div className="bg-white dark:bg-background-surface rounded-[2.5rem] p-7 border border-gray-100 dark:border-white/5 shadow-sm space-y-6">
+        <div className="bg-background-surface rounded-[2.5rem] p-7 border border-gray-100 shadow-sm space-y-6">
            <div className="flex flex-col gap-1">
-              <h4 className="text-2xl font-black dark:text-white leading-tight uppercase italic">{event.title}</h4>
+              <h4 className="text-2xl font-black text-slate-900 leading-tight uppercase italic">{event.title}</h4>
               <p className="text-sm text-primary font-bold uppercase tracking-widest">{event.time} - {event.endTime || 'LATE'}</p>
            </div>
            
            <div className="flex gap-4">
-              <div className="flex-1 p-4 bg-gray-50 dark:bg-black/20 rounded-2xl border border-gray-100 dark:border-white/5">
+              <div className="flex-1 p-4 bg-gray-50 rounded-2xl border border-gray-100">
                 <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Precio</p>
-                <p className="text-xs font-black dark:text-white">{event.price}</p>
+                <p className="text-xs font-black text-slate-900">{event.price}</p>
               </div>
-              <div className="flex-1 p-4 bg-gray-50 dark:bg-black/20 rounded-2xl border border-gray-100 dark:border-white/5">
+              <div className="flex-1 p-4 bg-gray-50 rounded-2xl border border-gray-100">
                 <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Categoría</p>
-                <p className="text-xs font-black dark:text-white uppercase">{event.category}</p>
+                <p className="text-xs font-black text-slate-900 uppercase">{event.category}</p>
               </div>
            </div>
 
-           <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed font-medium">
+           <p className="text-gray-500 text-sm leading-relaxed font-medium">
              Experimenta la producción más grande de la semana en {event.venue}. Sonido reforzado, shows de láser y los mejores visuales de Puerto Vallarta. 
            </p>
 
-           <button className="w-full h-16 bg-primary text-white font-black text-lg rounded-[2rem] shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-tighter">
+           <button className="w-full h-16 bg-primary text-white font-black text-lg rounded-[2rem] shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-tighter is-inactive" aria-disabled="true" type="button">
              Comprar Tickets
              <span className="material-symbols-outlined">local_activity</span>
            </button>

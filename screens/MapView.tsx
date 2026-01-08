@@ -54,20 +54,20 @@ const MapView: React.FC = () => {
       {/* HEADER MINIMALISTA */}
       <header className="relative z-50 p-6 pt-12 flex items-center justify-between pointer-events-none">
         <button onClick={() => navigate(-1)} className="w-12 h-12 glass rounded-2xl flex items-center justify-center pointer-events-auto active:scale-90 transition-all border-white/10">
-          <span className="material-symbols-outlined text-white">arrow_back</span>
+          <span className="material-symbols-outlined text-slate-700">arrow_back</span>
         </button>
         <div className="glass px-6 py-2.5 rounded-2xl flex flex-col items-center pointer-events-auto border-white/10">
            <span className="text-[9px] font-black text-primary uppercase tracking-[0.3em] italic leading-none">Vallarta Live</span>
-           <h1 className="text-[10px] font-black text-white/40 uppercase tracking-tighter mt-1">Navegación en Tiempo Real</h1>
+           <h1 className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">Navegación en Tiempo Real</h1>
         </div>
-        <button className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-primary pointer-events-auto active:scale-90 transition-all border-white/10">
+        <button className="w-12 h-12 glass rounded-2xl flex items-center justify-center text-primary pointer-events-auto active:scale-90 transition-all border-white/10 is-inactive" aria-disabled="true">
           <span className="material-symbols-outlined">explore</span>
         </button>
       </header>
 
       {/* TARJETA DE EVENTO ARMÓNICA - Diseño compacto y elegante */}
       <div className="mt-auto relative z-50 p-6 mb-32 flex justify-center w-full">
-        <div className="glass w-full max-w-[360px] rounded-[2.5rem] p-5 flex gap-5 items-center border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-fade-in-up">
+        <div className="glass w-full max-w-[360px] rounded-[2.5rem] p-5 flex gap-5 items-center border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.2)] animate-fade-in-up">
            <div className="w-20 h-20 rounded-[1.5rem] overflow-hidden shrink-0 border border-white/10 shadow-lg relative">
               <img src={selectedEvent.image} className="w-full h-full object-cover" alt={selectedEvent.title} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -78,16 +78,16 @@ const MapView: React.FC = () => {
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
                 <span className="text-[8px] font-black text-primary uppercase tracking-widest">Siguiente Evento</span>
               </div>
-              <h3 className="text-base font-black text-white uppercase italic truncate tracking-tight">{selectedEvent.title}</h3>
+              <h3 className="text-base font-black text-slate-900 uppercase italic truncate tracking-tight">{selectedEvent.title}</h3>
               
               <div className="flex items-center gap-4 mt-3">
                  <div className="flex items-center gap-1.5 bg-white/5 px-2.5 py-1 rounded-full border border-white/5">
                     <span className="material-symbols-outlined text-primary text-xs">schedule</span>
-                    <span className="text-[9px] font-black text-white/80 uppercase">{selectedEvent.time}</span>
+                    <span className="text-[9px] font-black text-slate-600 uppercase">{selectedEvent.time}</span>
                  </div>
                  <div className="flex items-center gap-1.5 bg-white/5 px-2.5 py-1 rounded-full border border-white/5">
                     <span className="material-symbols-outlined text-cyan-400 text-xs">directions_walk</span>
-                    <span className="text-[9px] font-black text-white/80 uppercase">8 min</span>
+                    <span className="text-[9px] font-black text-slate-600 uppercase">8 min</span>
                  </div>
               </div>
            </div>

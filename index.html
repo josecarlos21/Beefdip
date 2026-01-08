@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,14 @@
                         primary: {
                             DEFAULT: '#fb923c',
                             hover: '#f97316',
-                            subtle: 'rgba(251, 146, 60, 0.1)'
+                            subtle: 'rgba(251, 146, 60, 0.12)'
                         },
                         accent: '#f43f5e',
                         background: {
-                            light: '#f8fafc',
-                            dark: '#0a0f1e',
-                            surface: '#161e31',
-                            elevated: '#1e293b'
+                            light: '#ffffff',
+                            dark: '#f6f4ef',
+                            surface: '#ffffff',
+                            elevated: '#f0ede6'
                         }
                     },
                     fontFamily: {
@@ -44,18 +44,37 @@
         body { 
             -webkit-tap-highlight-color: transparent; 
             font-feature-settings: "cv02", "cv03", "cv04", "ss01";
-            background: #0a0f1e;
+            background: #f6f4ef;
         }
         .glass {
-            background: rgba(22, 30, 49, 0.75);
+            background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(15, 23, 42, 0.08);
         }
         .sunset-gradient {
             background: linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
         }
         .ocean-gradient {
-            background: linear-gradient(180deg, #0a0f1e 0%, #1e293b 100%);
+            background: linear-gradient(180deg, #f6f4ef 0%, #e9e4da 100%);
+        }
+        .is-inactive {
+            opacity: 0.45;
+            cursor: not-allowed;
+            position: relative;
+            pointer-events: none;
+        }
+        .is-inactive::after {
+            content: "Sin acción";
+            position: absolute;
+            top: -0.6rem;
+            right: -0.3rem;
+            padding: 0.1rem 0.35rem;
+            font-size: 0.45rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.06);
+            color: #94a3b8;
         }
     </style>
 <script type="importmap">
@@ -69,7 +88,7 @@
 }
 </script>
 </head>
-<body class="text-slate-900 dark:text-slate-100 transition-colors duration-500 overflow-x-hidden">
+<body class="text-slate-900 transition-colors duration-500 overflow-x-hidden">
     <div id="root"></div>
 </body>
 </html>

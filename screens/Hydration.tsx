@@ -19,9 +19,9 @@ const Wellness: React.FC = () => {
     <div className="pb-40 min-h-screen bg-background-dark font-sans overflow-x-hidden">
       <header className="px-6 pt-12 pb-6 flex items-center justify-between relative z-10">
         <button onClick={() => navigate(-1)} className="w-12 h-12 glass rounded-2xl flex items-center justify-center">
-          <span className="material-symbols-outlined text-white">arrow_back</span>
+          <span className="material-symbols-outlined text-slate-700">arrow_back</span>
         </button>
-        <h1 className="text-xl font-black text-white uppercase italic tracking-tighter">Bienestar Live</h1>
+        <h1 className="text-xl font-black text-slate-900 uppercase italic tracking-tighter">Bienestar Live</h1>
         <div className="w-12"></div>
       </header>
 
@@ -38,23 +38,23 @@ const Wellness: React.FC = () => {
         {/* TRACKERS REFINADOS */}
         <div className="space-y-6">
           {stats.map((s) => (
-            <div key={s.label} className="glass rounded-[2.5rem] p-6 space-y-4 shadow-xl border border-white/10">
+            <div key={s.label} className="glass rounded-[2.5rem] p-6 space-y-4 shadow-xl border border-slate-200/60">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className={`w-12 h-12 ${s.color}/10 rounded-2xl flex items-center justify-center shadow-inner`}>
                     <span className={`material-symbols-outlined text-2xl ${s.color.replace('bg-', 'text-')}`}>{s.icon}</span>
                   </div>
                   <div>
-                    <span className="text-[10px] font-black text-white uppercase tracking-widest">{s.label}</span>
+                    <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{s.label}</span>
                     <p className="text-xs font-bold text-slate-500 mt-0.5">{s.val}{s.unit} logrados</p>
                   </div>
                 </div>
                 <div className="text-right">
-                   <span className="text-xl font-black text-white">{Math.round((s.val / s.target) * 100)}%</span>
+                   <span className="text-xl font-black text-slate-900">{Math.round((s.val / s.target) * 100)}%</span>
                 </div>
               </div>
               
-              <div className="w-full h-2.5 bg-white/5 rounded-full overflow-hidden shadow-inner">
+              <div className="w-full h-2.5 bg-slate-200 rounded-full overflow-hidden shadow-inner">
                 <div 
                   className={`h-full ${s.color} transition-all duration-1000 ease-out shadow-[0_0_20px_rgba(255,255,255,0.1)]`} 
                   style={{ width: `${(s.val / s.target) * 100}%` }}
@@ -64,13 +64,13 @@ const Wellness: React.FC = () => {
               <div className="flex gap-3">
                 <button 
                   onClick={() => s.set(prev => Math.max(0, prev - s.step))}
-                  className="flex-1 h-12 glass rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all active:scale-95"
+                  className="flex-1 h-12 glass rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-white/80 transition-all active:scale-95 hover:-translate-y-0.5"
                 >
                   Restar
                 </button>
                 <button 
                   onClick={() => s.set(prev => Math.min(s.target, prev + s.step))}
-                  className={`flex-1 h-12 ${s.color} text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl transition-all active:scale-95`}
+                  className={`flex-1 h-12 ${s.color} text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl transition-all active:scale-95 hover:-translate-y-0.5`}
                 >
                   Añadir {s.step}{s.unit}
                 </button>
@@ -80,14 +80,14 @@ const Wellness: React.FC = () => {
         </div>
 
         {/* TIP DE SALUD CON ESTILO */}
-        <div className="bg-background-elevated p-6 rounded-[2rem] border border-white/5 shadow-2xl">
+        <div className="bg-background-elevated p-6 rounded-[2rem] border border-slate-200/60 shadow-2xl">
           <div className="flex gap-4 items-start">
             <div className="w-10 h-10 sunset-gradient rounded-xl flex items-center justify-center shrink-0">
                <span className="material-symbols-outlined text-white">lightbulb</span>
             </div>
             <div>
-              <h4 className="text-xs font-black text-white uppercase tracking-widest">Consejo del Staff</h4>
-              <p className="text-[11px] text-slate-400 mt-2 leading-relaxed font-medium">No olvides cenar fuerte antes de los Main Events en CC Slaughters. La hidratación es clave pero la comida es el motor.</p>
+              <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest">Consejo del Staff</h4>
+              <p className="text-[11px] text-slate-500 mt-2 leading-relaxed font-medium">No olvides cenar fuerte antes de los Main Events en CC Slaughters. La hidratación es clave pero la comida es el motor.</p>
             </div>
           </div>
         </div>

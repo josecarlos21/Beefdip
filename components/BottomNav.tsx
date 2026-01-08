@@ -12,17 +12,17 @@ const BottomNav: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto glass border-t border-white/5 px-6 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl">
+    <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto glass border-t border-slate-200/70 px-6 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl">
       {navItems.map((item) => (
         item.isHome ? (
           <NavLink
             key={item.path}
             to={item.path}
             className={({ isActive }) => 
-              `w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 relative ${
+              `w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 relative hover:-translate-y-0.5 ${
                 isActive 
                 ? 'bg-primary text-white shadow-xl shadow-primary/40 -mt-12 scale-105 border-[3px] border-background-dark' 
-                : 'text-slate-600'
+                : 'text-slate-500'
               }`
             }
           >
@@ -36,7 +36,7 @@ const BottomNav: React.FC = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) => 
-              `flex flex-col items-center gap-1 transition-colors ${isActive ? 'text-primary' : 'text-slate-600'}`
+              `flex flex-col items-center gap-1 transition-colors ${isActive ? 'text-primary' : 'text-slate-500'}`
             }
           >
             {/* Fix: Wrap children in a function to access NavLink's isActive state */}

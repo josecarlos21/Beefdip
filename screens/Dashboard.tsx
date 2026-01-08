@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
               Vallarta<span className="text-primary">Live</span>
             </h1>
           </div>
-          <button className="w-11 h-11 glass rounded-2xl flex items-center justify-center text-white">
+          <button className="w-11 h-11 glass rounded-2xl flex items-center justify-center text-slate-700 is-inactive" aria-disabled="true">
             <span className="material-symbols-outlined">notifications</span>
           </button>
         </header>
@@ -85,37 +85,37 @@ const Dashboard: React.FC = () => {
         </Link>
 
         {/* WELLNESS TRACKERS - ARMONIOSO */}
-        <Link to="/hydration" className="glass rounded-[2.5rem] p-6 space-y-4 block active:scale-[0.98] transition-all">
+        <Link to="/hydration" className="glass rounded-[2.5rem] p-6 space-y-4 block active:scale-[0.98] transition-all hover:-translate-y-0.5">
           <div className="flex items-center justify-between">
-             <h4 className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] italic">Estado de Vitalidad</h4>
+             <h4 className="text-[9px] font-black text-slate-500 uppercase tracking-[0.2em] italic">Estado de Vitalidad</h4>
              <span className="material-symbols-outlined text-primary text-lg">bolt</span>
           </div>
           
           <div className="grid grid-cols-3 gap-3">
-             <div className="bg-white/5 rounded-2xl p-3 flex flex-col items-center">
+             <div className="bg-background-elevated rounded-2xl p-3 flex flex-col items-center">
                 <span className="material-symbols-outlined text-cyan-400 text-xl mb-1">water_drop</span>
-                <span className="text-xs font-black text-white">{Math.round(stats.water)}%</span>
+                <span className="text-xs font-black text-slate-900">{Math.round(stats.water)}%</span>
              </div>
-             <div className="bg-white/5 rounded-2xl p-3 flex flex-col items-center">
+             <div className="bg-background-elevated rounded-2xl p-3 flex flex-col items-center">
                 <span className="material-symbols-outlined text-emerald-400 text-xl mb-1">restaurant</span>
-                <span className="text-xs font-black text-white">{Math.round(stats.food)}%</span>
+                <span className="text-xs font-black text-slate-900">{Math.round(stats.food)}%</span>
              </div>
-             <div className="bg-white/5 rounded-2xl p-3 flex flex-col items-center">
+             <div className="bg-background-elevated rounded-2xl p-3 flex flex-col items-center">
                 <span className="material-symbols-outlined text-indigo-400 text-xl mb-1">bedtime</span>
-                <span className="text-xs font-black text-white">{Math.round(stats.sleep)}%</span>
+                <span className="text-xs font-black text-slate-900">{Math.round(stats.sleep)}%</span>
              </div>
           </div>
         </Link>
 
         {/* ACCESS GRID */}
         <div className="grid grid-cols-2 gap-4">
-          <Link to="/map" className="glass h-32 rounded-[2rem] flex flex-col items-center justify-center group active:scale-95 transition-all">
+          <Link to="/map" className="glass h-32 rounded-[2rem] flex flex-col items-center justify-center group active:scale-95 transition-all hover:-translate-y-0.5">
              <span className="material-symbols-outlined text-primary text-3xl mb-1 group-hover:scale-110 transition-transform">explore</span>
-             <span className="text-[9px] font-black text-white uppercase tracking-widest">Explorar Mapa</span>
+             <span className="text-[9px] font-black text-slate-800 uppercase tracking-widest">Explorar Mapa</span>
           </Link>
-          <Link to="/itinerary" className="glass h-32 rounded-[2rem] flex flex-col items-center justify-center group active:scale-95 transition-all">
+          <Link to="/itinerary" className="glass h-32 rounded-[2rem] flex flex-col items-center justify-center group active:scale-95 transition-all hover:-translate-y-0.5">
              <span className="material-symbols-outlined text-primary text-3xl mb-1 group-hover:scale-110 transition-transform">confirmation_number</span>
-             <span className="text-[9px] font-black text-white uppercase tracking-widest">Tickets</span>
+             <span className="text-[9px] font-black text-slate-800 uppercase tracking-widest">Tickets</span>
           </Link>
         </div>
       </main>
