@@ -1,4 +1,4 @@
-
+// Added missing React import to fix the compilation error
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -6,7 +6,7 @@ const BottomNav: React.FC = () => {
   const navItems = [
     { path: '/dashboard', icon: 'home', label: 'Inicio', isHome: true },
     { path: '/map', icon: 'map', label: 'Mapa' },
-    { path: '/itinerary', icon: 'confirmation_number', label: 'Tickets' },
+    { path: '/itinerary', icon: 'confirmation_number', label: 'Itinerario' },
     { path: '/events', icon: 'calendar_month', label: 'Explorar' },
     { path: '/about', icon: 'grid_view', label: 'Más' },
   ];

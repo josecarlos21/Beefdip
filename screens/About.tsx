@@ -6,96 +6,115 @@ import BottomNav from '../components/BottomNav';
 const About: React.FC = () => {
   const navigate = useNavigate();
 
-  const hospitals = [
-    { name: 'Hospital CMQ Premiere', dist: '1.2 km', tel: '322 226 6500' },
-    { name: 'Hospital San Javier', dist: '3.5 km', tel: '322 226 1010' },
-    { name: 'Cruz Roja PV', dist: '2.1 km', tel: '322 222 1533' }
+  // Configuración de utilidades con paleta mate "tenue"
+  const menuItems = [
+    {
+      id: 'sos',
+      icon: 'emergency_share',
+      outerColor: 'bg-[#1e2330]', // Slate muy oscuro
+      innerColor: 'bg-red-500/10', // Acento sutil
+      iconColor: 'text-red-400',
+      action: () => navigate('/emergency')
+    },
+    {
+      id: 'security',
+      icon: 'shield_lock',
+      outerColor: 'bg-[#1e2330]',
+      innerColor: 'bg-indigo-500/10',
+      iconColor: 'text-indigo-300',
+      action: () => {}
+    },
+    {
+      id: 'hospitals',
+      icon: 'local_hospital',
+      outerColor: 'bg-[#1e2330]',
+      innerColor: 'bg-emerald-500/10',
+      iconColor: 'text-emerald-300',
+      action: () => {}
+    },
+    {
+      id: 'food',
+      icon: 'restaurant',
+      outerColor: 'bg-[#1e2330]',
+      innerColor: 'bg-amber-500/10',
+      iconColor: 'text-amber-200',
+      action: () => {}
+    },
+    {
+      id: 'donate',
+      icon: 'volunteer_activism',
+      outerColor: 'bg-[#1e2330]',
+      innerColor: 'bg-rose-500/10',
+      iconColor: 'text-rose-300',
+      action: () => {}
+    },
+    {
+      id: 'who',
+      icon: 'info',
+      outerColor: 'bg-[#1e2330]',
+      innerColor: 'bg-slate-400/10',
+      iconColor: 'text-slate-300',
+      action: () => {}
+    }
   ];
 
   return (
-    <div className="pb-44 bg-background-dark min-h-screen font-sans overflow-x-hidden">
-      <header className="px-8 pt-16 pb-8 flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-black text-white uppercase italic tracking-tighter">Ajustes</h1>
-          <p className="text-[9px] text-primary font-black mt-1 uppercase tracking-[0.4em] italic opacity-60">Utilidades Vitales</p>
+    <div className="h-screen bg-[#0a0f1e] overflow-hidden flex flex-col relative px-8 pt-16 pb-32">
+      {/* Luces de ambiente ultra-tenues */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(251,146,60,0.03),transparent_70%)] pointer-events-none"></div>
+      
+      {/* Indicador de Status Superior */}
+      <header className="mb-12 animate-reveal flex flex-col items-center">
+        <div className="flex gap-2 opacity-20">
+          <div className="w-2 h-2 rounded-full bg-white"></div>
+          <div className="w-12 h-2 rounded-full bg-white/40"></div>
+          <div className="w-2 h-2 rounded-full bg-white"></div>
         </div>
-        <div className="w-14 h-14 bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">
-           <span className="material-symbols-outlined text-white/30 text-2xl">grid_view</span>
-        </div>
+        <p className="text-[8px] font-black text-white/10 uppercase tracking-[1em] mt-4">System Utilities Interface</p>
       </header>
 
-      <main className="px-8 space-y-10">
-        {/* Acciones Críticas / Seguridad */}
-        <section className="grid grid-cols-2 gap-4 animate-reveal">
-          <button onClick={() => navigate('/emergency')} className="h-32 bg-red-600/10 rounded-[2.2rem] flex flex-col items-center justify-center gap-3 border border-red-500/20 active-scale group">
-            <div className="w-11 h-11 bg-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform shadow-red-600/20">
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>emergency</span>
+      {/* GRID: Cuadrados con Óvalos anidados */}
+      <main className="flex-1 grid grid-cols-2 gap-5 auto-rows-max min-h-0 overflow-y-auto hide-scrollbar">
+        {menuItems.map((item, idx) => (
+          <button
+            key={item.id}
+            onClick={item.action}
+            className={`group relative aspect-square ${item.outerColor} rounded-[3rem] active-scale transition-all duration-500 shadow-2xl animate-reveal overflow-hidden border border-white/[0.03]`}
+            style={{ animationDelay: `${idx * 0.05}s` }}
+          >
+            {/* El Óvalo (Cápsula) Interno */}
+            <div className={`absolute -bottom-8 left-4 right-4 top-1/3 ${item.innerColor} rounded-full transition-all duration-700 group-active:translate-y-2 group-active:scale-90`}></div>
+            
+            {/* Contenedor del Icono Anclado al Inferior */}
+            <div className="absolute inset-0 flex items-end justify-center pb-6">
+              <span 
+                className={`material-symbols-outlined text-[64px] ${item.iconColor} transition-transform duration-500 group-hover:scale-110 group-active:scale-95`}
+                style={{ fontVariationSettings: "'FILL' 1, 'wght' 300" }}
+              >
+                {item.icon}
+              </span>
             </div>
-            <span className="text-[9px] font-black text-red-500 uppercase tracking-widest italic leading-none">Protocolo SOS</span>
+
+            {/* Sutil reflejo en el borde superior */}
+            <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
           </button>
-          <button className="h-32 bg-amber-500/10 rounded-[2.2rem] flex flex-col items-center justify-center gap-3 border border-amber-500/20 active-scale group">
-            <div className="w-11 h-11 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform shadow-amber-500/20">
-              <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
-            </div>
-            <span className="text-[9px] font-black text-amber-500 uppercase tracking-widest italic leading-none">Donar Ahora</span>
-          </button>
-        </section>
-
-        {/* Directorio de Salud */}
-        <section className="space-y-4 animate-reveal" style={{ animationDelay: '0.1s' }}>
-          <div className="flex justify-between items-center px-1">
-            <h3 className="text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic">Servicios de Salud</h3>
-            <span className="text-[7px] font-black text-emerald-400 uppercase italic flex items-center gap-1.5 bg-emerald-400/10 px-2 py-0.5 rounded-full border border-emerald-400/20">
-              <span className="w-1 h-1 bg-emerald-400 rounded-full animate-pulse"></span>
-              24/7 ACTIVO
-            </span>
-          </div>
-          <div className="glass-pure rounded-[2.5rem] overflow-hidden border border-white/5 divide-y divide-white/5 shadow-2xl">
-            {hospitals.map(h => (
-              <div key={h.name} className="p-5 flex justify-between items-center hover:bg-white/[0.02] transition-colors">
-                <div>
-                  <p className="text-xs font-black text-white uppercase italic tracking-tight">{h.name}</p>
-                  <p className="text-[8px] font-bold text-white/20 uppercase mt-1 italic">{h.dist} • {h.tel}</p>
-                </div>
-                <button className="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 active-scale">
-                  <span className="material-symbols-outlined text-base text-white/60">call</span>
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Sobre Mí (Developer Core) */}
-        <section className="space-y-4 animate-reveal" style={{ animationDelay: '0.2s' }}>
-          <h3 className="text-[10px] font-black text-white/30 uppercase tracking-[0.4em] italic px-1">Sobre Mí</h3>
-          <div className="glass-pure rounded-[2.5rem] p-6 border border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent shadow-2xl">
-             <div className="flex items-center gap-5 mb-5">
-                <div className="w-14 h-14 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center shadow-inner overflow-hidden shadow-primary/20">
-                   <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=200" className="w-full h-full object-cover grayscale" alt="Dev" />
-                </div>
-                <div>
-                   <p className="text-sm font-black text-white uppercase italic tracking-tighter leading-none">Vallarta Local Dev</p>
-                   <p className="text-[8px] font-bold text-white/20 uppercase mt-2 italic tracking-widest">Ingeniería Visual PV-2026</p>
-                </div>
-             </div>
-             <p className="text-[11px] text-white/40 leading-relaxed italic uppercase font-bold tracking-tight">
-               He creado esta plataforma para que navegues Puerto Vallarta con total fluidez. Mi misión es darte las mejores herramientas para que disfrutes de cada fiesta con seguridad, estilo y toda la vibra local.
-             </p>
-             <div className="flex gap-4 pt-6 opacity-40">
-                {['alternate_email', 'share'].map(icon => (
-                  <button key={icon} className="w-9 h-9 rounded-xl glass-pure flex items-center justify-center border-white/5 text-white active-scale">
-                    <span className="material-symbols-outlined text-base">{icon}</span>
-                  </button>
-                ))}
-             </div>
-          </div>
-        </section>
-
-        <div className="text-center pt-6 opacity-5 flex flex-col items-center">
-           <div className="h-px w-10 bg-white mb-4"></div>
-           <p className="text-[6px] font-black text-white uppercase tracking-[1em] italic">Vallarta Live Engine v3.9</p>
-        </div>
+        ))}
       </main>
+
+      {/* FOOTER: Minimalista y elegante */}
+      <footer className="mt-10 flex flex-col items-center animate-reveal" style={{ animationDelay: '0.4s' }}>
+        <div className="flex items-center gap-4 grayscale opacity-10 hover:opacity-40 transition-all duration-1000">
+          <div className="flex flex-col items-center">
+            <p className="text-[7px] font-black text-white uppercase tracking-[0.4em] leading-none mb-2">Puerto Vallarta</p>
+            <div className="h-[1px] w-8 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+          </div>
+          <div className="w-px h-5 bg-white/10"></div>
+          <div className="flex items-center gap-2">
+             <span className="text-[6px] font-black text-emerald-500/50 uppercase tracking-[0.2em]">Validated Session</span>
+             <div className="w-1 h-1 rounded-full bg-emerald-500/30 animate-pulse"></div>
+          </div>
+        </div>
+      </footer>
 
       <BottomNav />
     </div>
