@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Events: React.FC = () => {
   return (
-    <div className="pb-40 bg-background-dark min-h-screen">
+    <div className="pb-40 bg-background-default min-h-screen">
       <header className="px-8 pt-16 pb-8 flex items-center justify-between animate-reveal">
         <div>
           <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em] italic">Puerto Vallarta</span>
@@ -40,7 +40,7 @@ const Events: React.FC = () => {
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background-default via-transparent to-black/20"></div>
               
               {/* Event Badge Floating */}
               <div className="absolute top-8 left-8">
@@ -69,7 +69,7 @@ const Events: React.FC = () => {
                         <span className="text-sm font-black text-primary italic uppercase tracking-tighter">Pass</span>
                       </div>
                    </div>
-                   <div className="w-16 h-16 rounded-[1.5rem] bg-white text-background-dark flex items-center justify-center shadow-2xl active-scale">
+                   <div className="w-16 h-16 rounded-[1.5rem] bg-white text-background-default flex items-center justify-center shadow-2xl active-scale">
                       <span className="material-symbols-outlined text-3xl">arrow_forward</span>
                    </div>
                 </div>

@@ -16,7 +16,7 @@ const Wellness: React.FC = () => {
   ];
 
   return (
-    <div className="pb-44 min-h-screen bg-background-dark font-sans overflow-x-hidden">
+    <div className="pb-44 min-h-screen bg-background-default font-sans overflow-x-hidden">
       <header className="relative h-44 w-full flex items-center px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
         <div className="relative z-10 flex justify-between w-full items-center pt-6 animate-reveal">
@@ -52,7 +52,7 @@ const Wellness: React.FC = () => {
 
             <div className="flex gap-3 pt-1">
               <button onClick={() => s.set(prev => Math.max(0, prev - s.step))} className="flex-1 h-10 glass-pure rounded-xl text-[8px] font-black uppercase italic active-scale border-white/5 opacity-60">Menos</button>
-              <button onClick={() => s.set(prev => Math.min(s.target, prev + s.step))} className={`flex-[1.5] h-10 ${s.color} text-background-dark rounded-xl text-[8px] font-black uppercase italic active-scale shadow-lg`}>Añadir {s.unit}</button>
+              <button onClick={() => s.set(prev => Math.min(s.target, prev + s.step))} className={`flex-[1.5] h-10 ${s.color} text-background-default rounded-xl text-[8px] font-black uppercase italic active-scale shadow-lg`}>Añadir {s.unit}</button>
             </div>
           </div>
         ))}

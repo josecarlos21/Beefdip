@@ -20,7 +20,7 @@ const EventDetail: React.FC = () => {
   }, []);
 
   return (
-    <div className="pb-40 min-h-screen bg-background-dark font-sans relative">
+    <div className="pb-40 min-h-screen bg-background-default font-sans relative">
       {/* High Energy Immersive Hero */}
       <section className="relative h-[550px] w-full overflow-hidden">
         <img 
@@ -139,7 +139,7 @@ const EventDetail: React.FC = () => {
              Sincronización total con la producción de {event.venue}. Audio certificado y visuales reactivos en tiempo real. Se recomienda llegar antes de la medianoche para evitar bloqueos en el acceso principal.
            </p>
 
-           <button className="w-full h-18 bg-white text-background-dark font-black text-sm rounded-[2rem] shadow-2xl flex items-center justify-center gap-4 active-scale transition-all uppercase tracking-[0.2em]">
+           <button className="w-full h-18 bg-white text-background-default font-black text-sm rounded-[2rem] shadow-2xl flex items-center justify-center gap-4 active-scale transition-all uppercase tracking-[0.2em]">
              Comprar Tickets
              <span className="material-symbols-outlined text-2xl">local_activity</span>
            </button>

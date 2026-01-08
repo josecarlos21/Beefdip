@@ -26,7 +26,7 @@ const BottomNav: React.FC = () => {
             className={({ isActive }) => 
               `w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 relative tap-active ${
                 isActive 
-                ? 'bg-primary text-white shadow-xl shadow-primary/40 -mt-12 scale-110 border-[4px] border-background-dark' 
+                ? 'bg-primary text-white shadow-xl shadow-primary/40 -mt-12 scale-110 border-[4px] border-background-default'
                 : 'text-slate-500'
               }`
             }
