@@ -1,0 +1,9 @@
+{
+  "shape": {
+    "radius": {
+      "button": { "$value": "1.8rem", "$type": "dimension" },
+      "card": { "$value": "2.2rem", "$type": "dimension" },
+      "pill": { "$value": "9999px", "$type": "dimension" }
+    }
+  }
+}
