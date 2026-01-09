@@ -1,0 +1,20 @@
+{
+  "color": {
+    "primary": {
+      "main": { "$value": "{color.palette.orange.400}", "$type": "color" },
+      "hover": { "$value": "{color.palette.orange.500}", "$type": "color" }
+    },
+    "accent": {
+      "main": { "$value": "{color.palette.rose.500}", "$type": "color" }
+    },
+    "background": {
+      "app": { "$value": "{color.palette.navy.900}", "$type": "color" },
+      "surface": { "$value": "{color.palette.navy.800}", "$type": "color" },
+      "dark": { "$value": "{color.palette.navy.900}", "$type": "color" }
+    },
+    "text": {
+      "primary": { "$value": "{color.palette.slate.100}", "$type": "color" },
+      "secondary": { "$value": "{color.palette.slate.200}", "$type": "color" }
+    }
+  }
+}
