@@ -1,0 +1,21 @@
+{
+  "component": {
+    "card": {
+      "background": { "$value": "{theme.background.surface}", "$type": "color" },
+      "border": { "$value": "{theme.border.default}", "$type": "color" },
+      "radius": { "$value": "{radius.xl}", "$type": "borderRadius" },
+      "padding": { "$value": "{spacing.6}", "$type": "spacing" }
+    },
+    "button": {
+        "padding-x": { "$value": "{spacing.6}", "$type": "spacing" },
+        "padding-y": { "$value": "{spacing.3}", "$type": "spacing" },
+        "radius": { "$value": "{radius.full}", "$type": "borderRadius" },
+        "font-weight": { "$value": "{font.weight.bold}", "$type": "fontWeight" }
+    },
+    "glass": {
+        "background": { "$value": "rgba(22, 30, 49, 0.7)", "$type": "color" },
+        "blur": { "$value": "12px", "$type": "dimension" },
+        "border": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+    }
+  }
+}

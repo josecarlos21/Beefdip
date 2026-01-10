@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background-dark pb-44 overflow-x-hidden">
+    <div className="min-h-screen bg-theme-background-base pb-44 overflow-x-hidden">
       {/* IMMERSIVE HERO AREA */}
       <section className="relative h-[85vh] w-full overflow-hidden">
         <video 
@@ -36,12 +36,12 @@ const Dashboard: React.FC = () => {
 
         <header className="absolute top-0 left-0 right-0 p-8 pt-16 flex justify-between items-start z-30">
           <div className="flex items-center gap-4 animate-reveal">
-            <div className="w-14 h-14 bg-primary rounded-[1.4rem] flex items-center justify-center shadow-2xl rotate-6 border border-white/20 active-scale">
+            <div className="w-14 h-14 bg-theme-action-primary-default rounded-[1.4rem] flex items-center justify-center shadow-2xl rotate-6 border border-white/20 active-scale">
               <span className="material-symbols-outlined text-white text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>local_fire_department</span>
             </div>
             <div className="flex flex-col">
-              <h1 className="text-2xl font-black text-white tracking-tighter uppercase italic leading-none">Vallarta</h1>
-              <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em] mt-1 ml-1 opacity-80 leading-none">Live</span>
+              <h1 className="text-2xl font-black text-theme-text-primary tracking-tighter uppercase italic leading-none">Vallarta</h1>
+              <span className="text-[10px] font-black text-theme-action-primary-default uppercase tracking-[0.5em] mt-1 ml-1 opacity-80 leading-none">Live</span>
             </div>
           </div>
           <button className="w-14 h-14 glass-pure rounded-[1.4rem] flex items-center justify-center text-white active-scale shadow-xl">
@@ -51,12 +51,12 @@ const Dashboard: React.FC = () => {
 
         <div className="absolute top-[42%] -translate-y-1/2 left-8 right-8 z-30 animate-reveal" style={{ animationDelay: '0.2s' }}>
            <div className="flex items-center gap-3 mb-4">
-              <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></div>
+              <div className="w-2.5 h-2.5 bg-theme-status-error rounded-full animate-ping"></div>
               <span className="text-[10px] font-black text-white/60 uppercase tracking-[0.5em] italic leading-none">Headliner Tonight</span>
            </div>
            <h2 className="text-6xl font-black text-white leading-[0.8] tracking-tighter uppercase italic drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
               {featured.title.split(' ')[0]}<br/>
-              <span className="text-primary">{featured.title.split(' ').slice(1).join(' ')}</span>
+              <span className="text-theme-action-primary-default">{featured.title.split(' ').slice(1).join(' ')}</span>
            </h2>
         </div>
 
@@ -75,7 +75,7 @@ const Dashboard: React.FC = () => {
                 </div>
               ))}
            </Link>
-           <Link to="/map" className="w-26 h-26 bg-primary rounded-full flex items-center justify-center shadow-[0_20px_80px_rgba(251,146,60,0.4)] border-[8px] border-background-dark active-scale animate-float">
+           <Link to="/map" className="w-26 h-26 bg-theme-action-primary-default rounded-full flex items-center justify-center shadow-[0_20px_80px_rgba(251,146,60,0.4)] border-[8px] border-theme-background-base active-scale animate-float">
               <span className="material-symbols-outlined text-white text-[48px]" style={{ fontVariationSettings: "'FILL' 1" }}>near_me</span>
               <div className="absolute inset-0 rounded-full border border-white/20 animate-visual-pulse"></div>
            </Link>
@@ -97,14 +97,14 @@ const Dashboard: React.FC = () => {
               <Link 
                 key={event.id} 
                 to={`/event/${event.id}`} 
-                className="relative min-w-[300px] h-[400px] rounded-[4rem] overflow-hidden group shadow-2xl active-scale border border-white/5"
+                className="relative min-w-[300px] h-[400px] rounded-[4rem] overflow-hidden group shadow-2xl active-scale border border-theme-border-subtle"
               >
                 <img src={event.image} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-theme-background-base/95 via-transparent to-transparent"></div>
                 <div className="absolute bottom-10 left-10 right-10">
                    <div className="flex items-center gap-2 mb-3">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-                      <span className="text-[9px] font-black text-primary uppercase tracking-widest italic">{event.category}</span>
+                      <span className="w-1.5 h-1.5 bg-theme-action-primary-default rounded-full animate-pulse"></span>
+                      <span className="text-[9px] font-black text-theme-action-primary-default uppercase tracking-widest italic">{event.category}</span>
                    </div>
                    <h4 className="text-2xl font-black text-white uppercase italic tracking-tighter leading-none truncate">{event.title}</h4>
                    <p className="text-[10px] font-black text-white/30 uppercase tracking-widest mt-4 italic truncate">{event.venue}</p>
