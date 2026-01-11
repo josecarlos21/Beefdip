@@ -1,0 +1,11 @@
+{
+  "effect": {
+    "glass": {
+      "base": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+      "light": { "$value": "rgba(255, 255, 255, 0.03)", "$type": "color" }
+    },
+    "blur": {
+      "std": { "$value": "28px", "$type": "dimension" }
+    }
+  }
+}
