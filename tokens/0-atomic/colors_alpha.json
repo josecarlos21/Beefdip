@@ -1,0 +1,16 @@
+{
+  "color": {
+    "alpha": {
+       "dark": {
+           "75": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+           "85": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" },
+           "20": { "$value": "rgba(10, 15, 30, 0.2)", "$type": "color" }
+       },
+       "light": {
+           "03": { "$value": "rgba(255, 255, 255, 0.03)", "$type": "color" },
+           "08": { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" },
+           "10": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+       }
+    }
+  }
+}

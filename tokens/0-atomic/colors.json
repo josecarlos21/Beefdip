@@ -1,0 +1,16 @@
+{
+  "color": {
+    "brand": {
+      "orange": {
+        "400": { "$value": "#fb923c", "$type": "color" }
+      },
+      "rose": {
+        "500": { "$value": "#f43f5e", "$type": "color" }
+      }
+    },
+    "neutral": {
+      "900": { "$value": "#0a0f1e", "$type": "color" },
+      "800": { "$value": "#161e31", "$type": "color" }
+    }
+  }
+}

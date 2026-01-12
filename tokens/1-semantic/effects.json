@@ -1,0 +1,13 @@
+{
+   "color": {
+       "glass": {
+           "base": { "$value": "{color.alpha.dark.75}", "$type": "color" },
+           "panel": { "$value": "{color.alpha.dark.85}", "$type": "color" },
+           "border": { "$value": "{color.alpha.light.10}", "$type": "color" }
+       }
+   },
+   "backdropBlur": {
+       "glass": { "$value": "{blur.std}", "$type": "dimension" },
+       "panel": { "$value": "{blur.lg}", "$type": "dimension" }
+   }
+}
