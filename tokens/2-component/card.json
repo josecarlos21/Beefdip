@@ -1,0 +1,6 @@
+{
+    "borderRadius": {
+        "card": { "lg": { "$value": "2.8rem", "$type": "dimension" } },
+        "visual": { "$value": "1.4rem", "$type": "dimension" }
+    }
+}

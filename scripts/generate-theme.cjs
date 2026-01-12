@@ -1,0 +1,171 @@
+const fs = require('fs');
+const path = require('path');
+
+// Helper to deeply merge objects
+function deepMerge(target, source) {
+  for (const key of Object.keys(source)) {
+    if (source[key] instanceof Object && !Array.isArray(source[key]) && key !== '$value' && key !== '$type') {
+      if (!target[key]) Object.assign(target, { [key]: {} });
+      deepMerge(target[key], source[key]);
+    } else {
+      Object.assign(target, { [key]: source[key] });
+    }
+  }
+  return target;
+}
+
+// Helper to read all JSON files in a directory recursively
+function readTokens(dir) {
+  let tokens = {};
+  if (!fs.existsSync(dir)) return tokens;
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      tokens = deepMerge(tokens, readTokens(fullPath));
+    } else if (file.endsWith('.json')) {
+      const content = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+      tokens = deepMerge(tokens, content);
+    }
+  }
+  return tokens;
+}
+
+// Helper to resolve references like {color.brand.orange.400}
+function resolveReferences(obj, root) {
+  if (typeof obj === 'string') {
+    if (obj.startsWith('{') && obj.endsWith('}')) {
+      const refPath = obj.slice(1, -1).split('.');
+      let current = root;
+      for (const key of refPath) {
+        if (current && current[key]) {
+            current = current[key];
+        } else {
+            console.warn(`Reference not found: ${obj}`);
+            return obj;
+        }
+      }
+      if (current && current.$value) {
+          return resolveReferences(current.$value, root);
+      }
+      return current;
+    }
+    return obj;
+  } else if (typeof obj === 'object' && obj !== null) {
+      if (obj.$value) {
+          obj.$value = resolveReferences(obj.$value, root);
+          return obj;
+      }
+
+      for (const key in obj) {
+          obj[key] = resolveReferences(obj[key], root);
+      }
+      return obj;
+  }
+  return obj;
+}
+
+// Convert resolved tokens to Tailwind config format
+function toTailwind(tokens) {
+    const theme = {
+        extend: {
+            colors: {},
+            fontFamily: {},
+            animation: {},
+            keyframes: {},
+            backdropBlur: {},
+            borderRadius: {}
+        }
+    };
+
+    // Helper to traverse and map
+    function traverse(obj, type) {
+        let result = {};
+        for (const key in obj) {
+            if (key === '$value' || key === '$type') continue;
+
+            const value = obj[key];
+            if (value.$value) {
+                // It's a token
+                if (type === 'color') {
+                     result[key] = value.$value;
+                } else if (type === 'fontFamily') {
+                     result[key] = value.$value.split(',').map(s => s.trim());
+                     if (result[key].length === 1) result[key] = result[key][0];
+                } else if (type === 'animation' || type === 'keyframes' || type === 'backdropBlur' || type === 'borderRadius') {
+                     result[key] = value.$value;
+                }
+            } else {
+                // It's a group
+                const nested = traverse(value, type);
+                if (Object.keys(nested).length > 0) {
+                    result[key] = nested;
+                }
+            }
+        }
+        return result;
+    }
+
+    if (tokens.color) theme.extend.colors = traverse(tokens.color, 'color');
+    if (tokens.fontFamily) theme.extend.fontFamily = traverse(tokens.fontFamily, 'fontFamily');
+    if (tokens.animation) theme.extend.animation = traverse(tokens.animation, 'animation');
+    if (tokens.keyframes) theme.extend.keyframes = traverse(tokens.keyframes, 'keyframes');
+    if (tokens.backdropBlur) theme.extend.backdropBlur = traverse(tokens.backdropBlur, 'backdropBlur');
+    if (tokens.borderRadius) theme.extend.borderRadius = traverse(tokens.borderRadius, 'borderRadius');
+
+    return theme;
+}
+
+// Convert resolved tokens to CSS Variables
+function toCSSVariables(tokens, prefix = '-') {
+    let cssLines = [];
+
+    function traverse(obj, currentPrefix) {
+        for (const key in obj) {
+            if (key === '$value' || key === '$type') continue;
+            const value = obj[key];
+            const newPrefix = currentPrefix ? `${currentPrefix}-${key}` : key;
+
+            if (value.$value) {
+                // Determine CSS variable name
+                // e.g., color-glass-base
+                cssLines.push(`--${newPrefix}: ${value.$value};`);
+            } else {
+                traverse(value, newPrefix);
+            }
+        }
+    }
+    traverse(tokens, '');
+    return cssLines.join('\n            ');
+}
+
+const tokensDir = path.join(__dirname, '../tokens');
+let rawTokens = readTokens(tokensDir);
+let resolvedTokens = resolveReferences(JSON.parse(JSON.stringify(rawTokens)), rawTokens);
+
+const tailwindTheme = toTailwind(resolvedTokens);
+const cssVariables = toCSSVariables(resolvedTokens);
+
+const output = `
+// Generated by scripts/generate-theme.cjs
+// Do not edit directly.
+
+window.tailwindConfig = {
+  darkMode: 'class',
+  theme: ${JSON.stringify(tailwindTheme, null, 2)}
+};
+
+// Inject CSS Variables
+const style = document.createElement('style');
+style.textContent = \`
+  :root {
+      ${cssVariables}
+  }
+\`;
+document.head.appendChild(style);
+`;
+
+const outputPath = path.join(__dirname, '../public/theme.js');
+fs.writeFileSync(outputPath, output);
+console.log(`Theme generated at ${outputPath}`);
