@@ -1,0 +1,14 @@
+{
+  "component": {
+    "glass_panel": {
+      "background": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" },
+      "blur": { "$value": "{effect.blur.panel}", "$type": "dimension" },
+      "border": { "$value": "{color.base.white_08}", "$type": "color" }
+    },
+    "glass_morphism": {
+      "background": { "$value": "{color.rose.500_10}", "$type": "color" },
+      "blur": { "$value": "{effect.blur.morphism}", "$type": "dimension" },
+      "border": { "$value": "{color.rose.500_20}", "$type": "color" }
+    }
+  }
+}

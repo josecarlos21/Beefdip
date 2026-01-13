@@ -1,0 +1,24 @@
+{
+  "semantic": {
+    "color": {
+      "primary": { "$value": "{color.orange.400}", "$type": "color" },
+      "accent": { "$value": "{color.rose.500}", "$type": "color" },
+      "background": {
+        "main": { "$value": "{color.base.dark}", "$type": "color" },
+        "surface": { "$value": "{color.base.surface}", "$type": "color" }
+      },
+      "text": {
+        "main": { "$value": "{color.slate.100}", "$type": "color" }
+      }
+    },
+    "font": {
+      "display": { "$value": "{font.sans}", "$type": "fontFamily" },
+      "ui": { "$value": "{font.body}", "$type": "fontFamily" }
+    },
+    "glass": {
+      "base": { "$value": "{color.base.glass}", "$type": "color" },
+      "border": { "$value": "{color.base.border_subtle}", "$type": "color" },
+      "blur": { "$value": "{effect.blur.std}", "$type": "dimension" }
+    }
+  }
+}
