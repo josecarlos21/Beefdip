@@ -1,0 +1,9 @@
+{
+  "pattern": {
+    "animation": {
+      "reveal": { "$value": "reveal {animation.duration.normal} {animation.easing.reveal} forwards", "$type": "string" },
+      "pulse": { "$value": "vpulse {animation.duration.slow} ease-in-out infinite", "$type": "string" },
+      "float": { "$value": "float {animation.duration.float} ease-in-out infinite", "$type": "string" }
+    }
+  }
+}

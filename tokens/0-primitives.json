@@ -1,0 +1,46 @@
+{
+  "color": {
+    "orange": {
+      "400": { "$value": "#fb923c", "$type": "color" }
+    },
+    "rose": {
+      "500": { "$value": "#f43f5e", "$type": "color" },
+      "500_10": { "$value": "rgba(239, 68, 68, 0.1)", "$type": "color" },
+      "500_20": { "$value": "rgba(239, 68, 68, 0.2)", "$type": "color" }
+    },
+    "slate": {
+      "100": { "$value": "#f1f5f9", "$type": "color" },
+      "800": { "$value": "#1e293b", "$type": "color" },
+      "900": { "$value": "#0f172a", "$type": "color" }
+    },
+    "base": {
+      "dark": { "$value": "#0a0f1e", "$type": "color" },
+      "surface": { "$value": "#161e31", "$type": "color" },
+      "glass": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+      "glass_light": { "$value": "rgba(255, 255, 255, 0.03)", "$type": "color" },
+      "border_subtle": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" },
+      "white_08": { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" }
+    }
+  },
+  "font": {
+    "sans": { "$value": "Plus Jakarta Sans", "$type": "fontFamily" },
+    "body": { "$value": "Inter", "$type": "fontFamily" }
+  },
+  "effect": {
+    "blur": {
+      "std": { "$value": "28px", "$type": "dimension" },
+      "panel": { "$value": "32px", "$type": "dimension" },
+      "morphism": { "$value": "20px", "$type": "dimension" }
+    }
+  },
+  "animation": {
+    "duration": {
+      "normal": { "$value": "0.6s", "$type": "duration" },
+      "slow": { "$value": "3s", "$type": "duration" },
+      "float": { "$value": "4s", "$type": "duration" }
+    },
+    "easing": {
+      "reveal": { "$value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "$type": "cubicBezier" }
+    }
+  }
+}

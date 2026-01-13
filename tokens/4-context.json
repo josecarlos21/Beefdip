@@ -1,0 +1,11 @@
+{
+  "context": {
+    "theme": {
+      "dark": {
+        "color": {
+          "primary": { "$value": "{color.orange.400}", "$type": "color" }
+        }
+      }
+    }
+  }
+}
