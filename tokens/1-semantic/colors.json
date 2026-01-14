@@ -1,0 +1,19 @@
+{
+  "color": {
+    "primary": {
+      "DEFAULT": { "$value": "{color.orange.500}", "$type": "color" },
+      "hover": { "$value": "{color.orange.600}", "$type": "color" }
+    },
+    "accent": {
+      "DEFAULT": { "$value": "{color.rose.500}", "$type": "color" }
+    },
+    "background": {
+      "dark": { "$value": "{color.vallarta.dark}", "$type": "color" },
+      "surface": { "$value": "{color.vallarta.surface}", "$type": "color" }
+    },
+    "text": {
+      "main": { "$value": "{color.slate.100}", "$type": "color" },
+      "muted": { "$value": "{color.slate.400}", "$type": "color" }
+    }
+  }
+}

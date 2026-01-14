@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "bar": {
+      "bg": { "$value": "{color.vallarta.surface}", "$type": "color" },
+      "border": { "$value": "{color.slate.800}", "$type": "color" }
+    },
+    "item": {
+      "active": { "$value": "{color.primary.DEFAULT}", "$type": "color" },
+      "inactive": { "$value": "{color.text.muted}", "$type": "color" }
+    }
+  }
+}
