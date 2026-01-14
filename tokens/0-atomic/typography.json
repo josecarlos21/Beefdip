@@ -1,0 +1,13 @@
+{
+  "font": {
+    "family": {
+      "display": { "$value": "Plus Jakarta Sans, sans-serif", "$type": "fontFamily" },
+      "body": { "$value": "Inter, sans-serif", "$type": "fontFamily" }
+    },
+    "weight": {
+      "regular": { "$value": 400, "$type": "fontWeight" },
+      "semibold": { "$value": 600, "$type": "fontWeight" },
+      "bold": { "$value": 800, "$type": "fontWeight" }
+    }
+  }
+}
