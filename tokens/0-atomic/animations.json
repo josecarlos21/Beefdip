@@ -1,0 +1,38 @@
+{
+  "animation": {
+    "visual-pulse": {
+      "$value": "vpulse 3s ease-in-out infinite",
+      "$type": "cubicBezier"
+    },
+    "reveal": {
+      "$value": "reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+      "$type": "cubicBezier"
+    },
+    "float": {
+      "$value": "float 4s ease-in-out infinite",
+      "$type": "cubicBezier"
+    },
+    "connector-flow": {
+      "$value": "flow 3s linear infinite",
+      "$type": "cubicBezier"
+    }
+  },
+  "keyframes": {
+    "vpulse": {
+      "0%, 100%": { "$value": { "opacity": "0.4", "transform": "scale(1)" }, "$type": "strokeStyle" },
+      "50%": { "$value": { "opacity": "0.8", "transform": "scale(1.05)" }, "$type": "strokeStyle" }
+    },
+    "reveal": {
+      "0%": { "$value": { "opacity": "0", "transform": "translateY(24px)" }, "$type": "strokeStyle" },
+      "100%": { "$value": { "opacity": "1", "transform": "translateY(0)" }, "$type": "strokeStyle" }
+    },
+    "float": {
+      "0%, 100%": { "$value": { "transform": "translateY(0)" }, "$type": "strokeStyle" },
+      "50%": { "$value": { "transform": "translateY(-10px)" }, "$type": "strokeStyle" }
+    },
+    "flow": {
+      "0%": { "$value": { "strokeDashoffset": "40" }, "$type": "strokeStyle" },
+      "100%": { "$value": { "strokeDashoffset": "0" }, "$type": "strokeStyle" }
+    }
+  }
+}

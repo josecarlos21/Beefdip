@@ -1,0 +1,12 @@
+{
+  "semantic": {
+    "color": {
+      "primary": { "$value": "{color.orange.400}", "$type": "color" },
+      "accent": { "$value": "{color.rose.500}", "$type": "color" },
+      "background": {
+        "dark": { "$value": "{color.brand.dark}", "$type": "color" },
+        "surface": { "$value": "{color.brand.surface}", "$type": "color" }
+      }
+    }
+  }
+}

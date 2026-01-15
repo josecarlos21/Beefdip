@@ -1,0 +1,7 @@
+{
+  "component": {
+    "card": {
+      "background": { "$value": "{semantic.color.background.surface}", "$type": "color" }
+    }
+  }
+}

@@ -26,10 +26,10 @@ const Login: React.FC = () => {
         <div className="w-24 h-24 bg-primary rounded-[2.2rem] flex items-center justify-center shadow-[0_0_80px_rgba(251,146,60,0.5)] mb-10 rotate-6 border-4 border-white/20 active-scale">
           <span className="material-symbols-outlined text-white text-[60px]" style={{ fontVariationSettings: "'FILL' 1" }}>local_fire_department</span>
         </div>
-        <h1 className="text-6xl font-black text-white tracking-tighter uppercase italic leading-[0.8] text-center">
+        <h1 className="font-display text-6xl font-black text-white tracking-tighter uppercase italic leading-[0.8] text-center">
           Vallarta<br/><span className="text-primary">Live</span>
         </h1>
-        <p className="text-[10px] font-black text-white/30 uppercase tracking-[0.6em] mt-8 italic">Circuit Access Protocol</p>
+        <p className="font-body text-[10px] font-black text-white/30 uppercase tracking-[0.6em] mt-8 italic">Circuit Access Protocol</p>
       </div>
 
       {/* Form Area - Glass Dock */}
