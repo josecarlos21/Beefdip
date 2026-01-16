@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Events: React.FC = () => {
   return (
-    <div className="pb-40 bg-background-dark min-h-screen">
+    <div className="pb-40 bg-background-default min-h-screen">
       <header className="px-8 pt-16 pb-8 flex items-center justify-between animate-reveal">
         <div>
           <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em] italic">Puerto Vallarta</span>

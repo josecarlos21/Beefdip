@@ -9,7 +9,7 @@ const Itinerary: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState(2);
 
   return (
-    <div className="pb-44 min-h-screen bg-background-dark overflow-x-hidden">
+    <div className="pb-44 min-h-screen bg-background-default overflow-x-hidden">
       <header className="px-8 pt-16 pb-6 flex justify-between items-end animate-reveal">
         <div>
           <h1 className="text-2xl font-black text-white uppercase italic tracking-tighter leading-none">Mi Agenda</h1>

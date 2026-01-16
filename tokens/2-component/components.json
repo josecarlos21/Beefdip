@@ -1,0 +1,23 @@
+{
+  "component": {
+    "button": {
+      "primary": {
+        "bg": { "$value": "{color.semantic.primary}", "$type": "color" },
+        "text": { "$value": "{color.semantic.text.inverse}", "$type": "color" },
+        "radius": { "$value": "{radius.xl}", "$type": "dimension" }
+      },
+      "glass": {
+        "bg": { "$value": "{color.semantic.glass.default}", "$type": "color" },
+        "border": { "$value": "{color.semantic.glass.light}", "$type": "color" },
+        "radius": { "$value": "{radius.xl}", "$type": "dimension" }
+      }
+    },
+    "card": {
+      "glass": {
+        "bg": { "$value": "{color.semantic.glass.default}", "$type": "color" },
+        "blur": { "$value": "{effect.blur.std}", "$type": "blur" },
+        "border": { "$value": "{color.semantic.glass.light}", "$type": "color" }
+      }
+    }
+  }
+}

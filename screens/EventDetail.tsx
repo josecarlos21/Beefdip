@@ -20,7 +20,7 @@ const EventDetail: React.FC = () => {
   }, []);
 
   return (
-    <div className="pb-40 min-h-screen bg-background-dark font-sans relative">
+    <div className="pb-40 min-h-screen bg-background-default font-sans relative">
       {/* High Energy Immersive Hero */}
       <section className="relative h-[550px] w-full overflow-hidden">
         <img 

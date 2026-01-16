@@ -1,0 +1,24 @@
+{
+  "color": {
+    "semantic": {
+      "primary": { "$value": "{color.primitive.orange.400}", "$type": "color" },
+      "accent": { "$value": "{color.primitive.rose.500}", "$type": "color" },
+      "background": {
+        "default": { "$value": "{color.primitive.brand.dark}", "$type": "color" },
+        "surface": { "$value": "{color.primitive.brand.surface}", "$type": "color" }
+      },
+      "glass": {
+        "default": { "$value": "{color.primitive.brand.glass}", "$type": "color" },
+        "light": { "$value": "{color.primitive.brand.glass_light}", "$type": "color" }
+      },
+      "border": {
+        "subtle": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+      },
+      "text": {
+        "default": { "$value": "{color.primitive.slate.100}", "$type": "color" },
+        "muted": { "$value": "{color.primitive.slate.200}", "$type": "color" },
+        "inverse": { "$value": "{color.primitive.slate.900}", "$type": "color" }
+      }
+    }
+  }
+}
