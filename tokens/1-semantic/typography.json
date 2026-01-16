@@ -1,0 +1,13 @@
+{
+  "typography": {
+    "semantic": {
+      "heading": {
+        "display": { "$value": "{font.family.display}", "$type": "fontFamily" },
+        "regular": { "$value": "{font.family.body}", "$type": "fontFamily" }
+      },
+      "body": {
+        "default": { "$value": "{font.family.body}", "$type": "fontFamily" }
+      }
+    }
+  }
+}

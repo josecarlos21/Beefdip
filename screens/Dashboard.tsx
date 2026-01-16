@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background-dark pb-44 overflow-x-hidden">
+    <div className="min-h-screen bg-background-default pb-44 overflow-x-hidden">
       {/* IMMERSIVE HERO AREA */}
       <section className="relative h-[85vh] w-full overflow-hidden">
         <video 
@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
               <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em] mt-1 ml-1 opacity-80 leading-none">Live</span>
             </div>
           </div>
-          <button className="w-14 h-14 glass-pure rounded-[1.4rem] flex items-center justify-center text-white active-scale shadow-xl">
+          <button className="w-14 h-14 bg-glass-default backdrop-blur-std border border-border-subtle rounded-[1.4rem] flex items-center justify-center text-white active-scale shadow-xl">
             <span className="material-symbols-outlined text-2xl">notifications_active</span>
           </button>
         </header>
@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         <div className="absolute bottom-20 left-8 right-8 z-30 flex justify-between items-end animate-reveal" style={{ animationDelay: '0.4s' }}>
-           <Link to="/hydration" className="flex gap-4 p-4 py-5 glass-pure rounded-[2.8rem] border border-white/10 active-scale shadow-2xl">
+           <Link to="/hydration" className="flex gap-4 p-4 py-5 bg-glass-default backdrop-blur-std border border-border-subtle rounded-[2.8rem] active-scale shadow-2xl">
               {[
                 { icon: 'water_drop', color: 'text-cyan-400', val: energy.water },
                 { icon: 'restaurant', color: 'text-emerald-400', val: energy.food },
@@ -115,13 +115,13 @@ const Dashboard: React.FC = () => {
         </section>
 
         <div className="grid grid-cols-2 gap-8 pb-16">
-           <Link to="/itinerary" className="h-56 glass-pure rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl group border border-white/5">
-              <div className="w-18 h-18 bg-white/5 rounded-[2rem] flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors">
+           <Link to="/itinerary" className="h-56 bg-glass-default backdrop-blur-std border border-border-subtle rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl group">
+              <div className="w-18 h-18 bg-glass-light rounded-[2rem] flex items-center justify-center border border-border-subtle group-hover:bg-white/10 transition-colors">
                  <span className="material-symbols-outlined text-white text-[36px]">confirmation_number</span>
               </div>
               <span className="text-[11px] font-black text-white/40 uppercase tracking-widest italic">Protocol ID</span>
            </Link>
-           <Link to="/emergency" className="h-56 glass-pure rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl border border-red-900/15 group">
+           <Link to="/emergency" className="h-56 bg-glass-default backdrop-blur-std border border-border-subtle rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl group">
               <div className="w-18 h-18 bg-red-600/90 rounded-[2rem] flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
                  <span className="material-symbols-outlined text-white text-[36px]" style={{ fontVariationSettings: "'FILL' 1" }}>gpp_maybe</span>
               </div>

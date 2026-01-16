@@ -7,7 +7,7 @@ const Login: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <div className="min-h-screen bg-background-dark flex flex-col relative overflow-hidden">
+    <div className="min-h-screen bg-background-default flex flex-col relative overflow-hidden">
       {/* Background Video Layer */}
       <div className="absolute inset-0 z-0">
         <video 

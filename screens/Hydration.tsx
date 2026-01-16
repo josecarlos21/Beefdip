@@ -16,7 +16,7 @@ const Wellness: React.FC = () => {
   ];
 
   return (
-    <div className="pb-44 min-h-screen bg-background-dark font-sans overflow-x-hidden">
+    <div className="pb-44 min-h-screen bg-background-default font-sans overflow-x-hidden">
       <header className="relative h-44 w-full flex items-center px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent"></div>
         <div className="relative z-10 flex justify-between w-full items-center pt-6 animate-reveal">

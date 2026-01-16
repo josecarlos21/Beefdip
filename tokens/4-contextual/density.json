@@ -1,0 +1,9 @@
+{
+  "spacing": {
+    "context": {
+      "compact": {
+        "4": { "$value": "0.75rem", "$type": "dimension" }
+      }
+    }
+  }
+}
