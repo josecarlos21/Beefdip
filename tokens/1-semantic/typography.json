@@ -1,0 +1,20 @@
+{
+  "fontFamily": {
+    "heading": { "$value": "{fontFamily.sans}", "$type": "fontFamily" },
+    "body": { "$value": "{fontFamily.bodyText}", "$type": "fontFamily" }
+  },
+  "fontSize": {
+    "heading": {
+      "xl": { "$value": "{fontSize.3xl}", "$type": "dimension" },
+      "lg": { "$value": "{fontSize.2xl}", "$type": "dimension" },
+      "md": { "$value": "{fontSize.xl}", "$type": "dimension" },
+      "sm": { "$value": "{fontSize.lg}", "$type": "dimension" }
+    },
+    "body": {
+      "lg": { "$value": "{fontSize.lg}", "$type": "dimension" },
+      "base": { "$value": "{fontSize.base}", "$type": "dimension" },
+      "sm": { "$value": "{fontSize.sm}", "$type": "dimension" },
+      "xs": { "$value": "{fontSize.xs}", "$type": "dimension" }
+    }
+  }
+}
