@@ -1,0 +1,28 @@
+{
+  "color": {
+    "button": {
+      "primary": {
+        "bg": { "$value": "{color.brand.primary.600}", "$type": "color" },
+        "text": { "$value": "{color.neutral.50}", "$type": "color" },
+        "hover": { "$value": "{color.brand.primary.500}", "$type": "color" }
+      },
+      "secondary": {
+        "bg": { "$value": "transparent", "$type": "color" },
+        "text": { "$value": "{color.brand.primary.500}", "$type": "color" },
+        "border": { "$value": "{color.brand.primary.600}", "$type": "color" }
+      }
+    },
+    "card": {
+      "bg": { "$value": "{color.background.surface}", "$type": "color" },
+      "border": { "$value": "{color.border.default}", "$type": "color" }
+    }
+  },
+  "borderRadius": {
+    "card": { "$value": "{borderRadius.xl}", "$type": "dimension" },
+    "button": { "$value": "{borderRadius.lg}", "$type": "dimension" }
+  },
+  "blur": {
+    "card": { "$value": "{blur.lg}", "$type": "dimension" },
+    "overlay": { "$value": "{blur.md}", "$type": "dimension" }
+  }
+}

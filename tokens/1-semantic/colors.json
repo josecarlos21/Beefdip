@@ -1,0 +1,24 @@
+{
+  "color": {
+    "background": {
+      "default": { "$value": "{color.neutral.950}", "$type": "color" },
+      "surface": { "$value": "{color.neutral.900}", "$type": "color" },
+      "overlay": { "$value": "{color.neutral.800}", "$type": "color" }
+    },
+    "text": {
+      "primary": { "$value": "{color.neutral.50}", "$type": "color" },
+      "secondary": { "$value": "{color.neutral.400}", "$type": "color" },
+      "accent": { "$value": "{color.brand.primary.500}", "$type": "color" },
+      "inverse": { "$value": "{color.neutral.950}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.neutral.800}", "$type": "color" },
+      "active": { "$value": "{color.brand.primary.600}", "$type": "color" }
+    },
+    "status": {
+      "success": { "$value": "{color.success.500}", "$type": "color" },
+      "error": { "$value": "{color.error.500}", "$type": "color" },
+      "warning": { "$value": "{color.warning.500}", "$type": "color" }
+    }
+  }
+}
