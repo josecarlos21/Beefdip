@@ -1,0 +1,32 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "$value": "{color.base.orange.400}", "$type": "color" },
+      "accent": { "$value": "{color.base.rose.500}", "$type": "color" }
+    },
+    "background": {
+      "default": { "$value": "{color.base.dark.900}", "$type": "color" },
+      "dark": { "$value": "{color.base.dark.900}", "$type": "color" },
+      "surface": { "$value": "{color.base.dark.800}", "$type": "color" },
+      "glass": {
+        "pure": { "$value": "{color.base.dark.glass}", "$type": "color" },
+        "panel": { "$value": "{color.base.dark.glass_panel}", "$type": "color" },
+        "light": { "$value": "{color.base.white.03}", "$type": "color" }
+      }
+    },
+    "text": {
+      "primary": { "$value": "{color.base.slate.100}", "$type": "color" },
+      "inverse": { "$value": "{color.base.dark.900}", "$type": "color" }
+    },
+    "border": {
+      "subtle": { "$value": "{color.base.white.10}", "$type": "color" },
+      "highlight": { "$value": "{color.base.white.08}", "$type": "color" }
+    },
+    "ui": {
+      "glass": {
+         "morphism": { "$value": "{color.base.rose.500_10}", "$type": "color" },
+         "border": { "$value": "{color.base.rose.500_20}", "$type": "color" }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "pattern": {
+    "layout": {
+      "app": {
+        "maxWidth": { "$value": "28rem", "$type": "dimension" }
+      }
+    }
+  }
+}

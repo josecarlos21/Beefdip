@@ -1,0 +1,21 @@
+{
+  "component": {
+    "button": {
+      "radius": { "$value": "{radius.full}", "$type": "borderRadius" },
+      "spacing": {
+        "x": { "$value": "{size.spacing.6}", "$type": "dimension" },
+        "y": { "$value": "{size.spacing.3}", "$type": "dimension" }
+      },
+      "font": {
+         "weight": { "$value": "{font.weight.bold}", "$type": "fontWeight" }
+      }
+    },
+    "card": {
+      "glass": {
+        "bg": { "$value": "{color.background.glass.pure}", "$type": "color" },
+        "blur": { "$value": "{effect.blur.std}", "$type": "blur" },
+        "border": { "$value": "{color.border.subtle}", "$type": "color" }
+      }
+    }
+  }
+}

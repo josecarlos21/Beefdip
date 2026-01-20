@@ -1,0 +1,11 @@
+{
+  "typography": {
+    "heading": {
+      "display": { "$value": "{font.family.display}", "$type": "fontFamily" }
+    },
+    "text": {
+      "body": { "$value": "{font.family.body}", "$type": "fontFamily" },
+      "mono": { "$value": "{font.family.mono}", "$type": "fontFamily" }
+    }
+  }
+}
