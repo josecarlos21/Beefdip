@@ -1,0 +1,7 @@
+{
+  "layout": {
+    "container": {
+      "padding": { "$value": "2rem", "$type": "dimension" }
+    }
+  }
+}

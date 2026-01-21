@@ -1,0 +1,16 @@
+{
+  "color": {
+    "base": {
+      "orange": {
+        "500": { "$value": "#fb923c", "$type": "color" }
+      },
+      "rose": {
+        "500": { "$value": "#f43f5e", "$type": "color" }
+      },
+      "dark": {
+        "900": { "$value": "#0a0f1e", "$type": "color" },
+        "800": { "$value": "#161e31", "$type": "color" }
+      }
+    }
+  }
+}

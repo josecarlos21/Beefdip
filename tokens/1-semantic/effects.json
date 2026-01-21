@@ -1,0 +1,6 @@
+{
+  "effect": {
+    "glass": { "$value": "{effect.blur.glass}", "$type": "blur" },
+    "panel": { "$value": "{effect.blur.panel}", "$type": "blur" }
+  }
+}
