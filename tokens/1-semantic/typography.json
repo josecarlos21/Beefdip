@@ -1,0 +1,6 @@
+{
+  "font": {
+    "sans": { "$value": "{font.family.body}", "$type": "fontFamily" },
+    "display": { "$value": "{font.family.display}", "$type": "fontFamily" }
+  }
+}

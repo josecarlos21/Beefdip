@@ -36,7 +36,7 @@ const Dashboard: React.FC = () => {
 
         <header className="absolute top-0 left-0 right-0 p-8 pt-16 flex justify-between items-start z-30">
           <div className="flex items-center gap-4 animate-reveal">
-            <div className="w-14 h-14 bg-primary rounded-[1.4rem] flex items-center justify-center shadow-2xl rotate-6 border border-white/20 active-scale">
+            <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center shadow-2xl rotate-6 border border-white/20 active-scale">
               <span className="material-symbols-outlined text-white text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>local_fire_department</span>
             </div>
             <div className="flex flex-col">
@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
               <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em] mt-1 ml-1 opacity-80 leading-none">Live</span>
             </div>
           </div>
-          <button className="w-14 h-14 glass-pure rounded-[1.4rem] flex items-center justify-center text-white active-scale shadow-xl">
+          <button className="w-14 h-14 glass-pure rounded-xl flex items-center justify-center text-white active-scale shadow-xl">
             <span className="material-symbols-outlined text-2xl">notifications_active</span>
           </button>
         </header>
@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         <div className="absolute bottom-20 left-8 right-8 z-30 flex justify-between items-end animate-reveal" style={{ animationDelay: '0.4s' }}>
-           <Link to="/hydration" className="flex gap-4 p-4 py-5 glass-pure rounded-[2.8rem] border border-white/10 active-scale shadow-2xl">
+           <Link to="/hydration" className="flex gap-4 p-4 py-5 glass-pure rounded-2xl border border-white/10 active-scale shadow-2xl">
               {[
                 { icon: 'water_drop', color: 'text-cyan-400', val: energy.water },
                 { icon: 'restaurant', color: 'text-emerald-400', val: energy.food },
@@ -97,7 +97,7 @@ const Dashboard: React.FC = () => {
               <Link 
                 key={event.id} 
                 to={`/event/${event.id}`} 
-                className="relative min-w-[300px] h-[400px] rounded-[4rem] overflow-hidden group shadow-2xl active-scale border border-white/5"
+                className="relative min-w-[300px] h-[400px] rounded-4xl overflow-hidden group shadow-2xl active-scale border border-white/5"
               >
                 <img src={event.image} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-transparent to-transparent"></div>
@@ -115,13 +115,13 @@ const Dashboard: React.FC = () => {
         </section>
 
         <div className="grid grid-cols-2 gap-8 pb-16">
-           <Link to="/itinerary" className="h-56 glass-pure rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl group border border-white/5">
+           <Link to="/itinerary" className="h-56 glass-pure rounded-3xl flex flex-col items-center justify-center gap-6 active-scale shadow-2xl group border border-white/5">
               <div className="w-18 h-18 bg-white/5 rounded-[2rem] flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors">
                  <span className="material-symbols-outlined text-white text-[36px]">confirmation_number</span>
               </div>
               <span className="text-[11px] font-black text-white/40 uppercase tracking-widest italic">Protocol ID</span>
            </Link>
-           <Link to="/emergency" className="h-56 glass-pure rounded-[3.5rem] flex flex-col items-center justify-center gap-6 active-scale shadow-2xl border border-red-900/15 group">
+           <Link to="/emergency" className="h-56 glass-pure rounded-3xl flex flex-col items-center justify-center gap-6 active-scale shadow-2xl border border-red-900/15 group">
               <div className="w-18 h-18 bg-red-600/90 rounded-[2rem] flex items-center justify-center shadow-lg group-hover:bg-red-500 transition-colors">
                  <span className="material-symbols-outlined text-white text-[36px]" style={{ fontVariationSettings: "'FILL' 1" }}>gpp_maybe</span>
               </div>

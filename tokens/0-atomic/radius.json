@@ -1,0 +1,19 @@
+{
+  "radius": {
+    "sm": { "$value": "0.125rem", "$type": "dimension" },
+    "md": { "$value": "0.375rem", "$type": "dimension" },
+    "lg": { "$value": "0.5rem", "$type": "dimension" },
+    "xl": { "$value": "1.4rem", "$type": "dimension" },
+    "2xl": { "$value": "2.8rem", "$type": "dimension" },
+    "3xl": { "$value": "3.5rem", "$type": "dimension" },
+    "4xl": { "$value": "4rem", "$type": "dimension" },
+    "full": { "$value": "9999px", "$type": "dimension" }
+  },
+  "effect": {
+    "blur": {
+      "std": { "$value": "28px", "$type": "blur" },
+      "panel": { "$value": "32px", "$type": "blur" },
+      "glass": { "$value": "20px", "$type": "blur" }
+    }
+  }
+}
