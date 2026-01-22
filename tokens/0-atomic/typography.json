@@ -1,0 +1,9 @@
+{
+  "font": {
+    "family": {
+      "display": { "$value": "Plus Jakarta Sans, sans-serif", "$type": "fontFamily" },
+      "body": { "$value": "Inter, sans-serif", "$type": "fontFamily" },
+      "mono": { "$value": "monospace", "$type": "fontFamily" }
+    }
+  }
+}

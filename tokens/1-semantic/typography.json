@@ -1,0 +1,6 @@
+{
+  "font": {
+    "display": { "$value": "{font.family.display}", "$type": "fontFamily" },
+    "body": { "$value": "{font.family.body}", "$type": "fontFamily" }
+  }
+}

@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "generate-theme": "node scripts/generate-theme.cjs",
+    "dev": "npm run generate-theme && vite",
+    "build": "npm run generate-theme && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
