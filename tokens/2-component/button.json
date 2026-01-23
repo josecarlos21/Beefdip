@@ -1,0 +1,9 @@
+{
+  "button": {
+    "primary": {
+      "bg": { "$value": "{color.brand.primary}", "$type": "color" },
+      "text": { "$value": "{color.text.inverse}", "$type": "color" },
+      "radius": { "$value": "{radius.lg}", "$type": "dimension" }
+    }
+  }
+}
