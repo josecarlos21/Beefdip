@@ -1,0 +1,16 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "$value": "{color.base.orange.400}", "$type": "color" },
+      "accent": { "$value": "{color.base.rose.500}", "$type": "color" }
+    },
+    "bg": {
+      "canvas": { "$value": "{color.base.blue.950}", "$type": "color" },
+      "surface": { "$value": "{color.base.blue.900}", "$type": "color" }
+    },
+    "text": {
+      "primary": { "$value": "{color.base.slate.100}", "$type": "color" },
+      "inverse": { "$value": "{color.base.white}", "$type": "color" }
+    }
+  }
+}

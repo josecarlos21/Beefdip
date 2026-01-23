@@ -1,0 +1,6 @@
+{
+  "layout": {
+    "max-width": { "$value": "28rem", "$type": "dimension" },
+    "container-padding": { "$value": "{spacing.4}", "$type": "dimension" }
+  }
+}

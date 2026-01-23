@@ -1,0 +1,7 @@
+{
+  "card": {
+    "bg": { "$value": "{color.bg.surface}", "$type": "color" },
+    "radius": { "$value": "{radius.2xl}", "$type": "dimension" },
+    "padding": { "$value": "{spacing.6}", "$type": "dimension" }
+  }
+}
