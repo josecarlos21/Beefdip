@@ -1,0 +1,8 @@
+{
+  "blur": {
+    "std": { "$value": "28px", "$type": "dimension" }
+  },
+  "backdropBlur": {
+    "std": { "$value": "28px", "$type": "dimension" }
+  }
+}
