@@ -1,0 +1,13 @@
+{
+  "effect": {
+    "blur": {
+      "none": { "$value": "0", "$type": "dimension" },
+      "sm": { "$value": "4px", "$type": "dimension" },
+      "md": { "$value": "12px", "$type": "dimension" },
+      "lg": { "$value": "20px", "$type": "dimension" },
+      "xl": { "$value": "28px", "$type": "dimension" },
+      "2xl": { "$value": "32px", "$type": "dimension" },
+      "3xl": { "$value": "64px", "$type": "dimension" }
+    }
+  }
+}
