@@ -1,0 +1,7 @@
+{
+  "blur": {
+    "std": { "$value": "28px", "$type": "dimension" },
+    "md": { "$value": "20px", "$type": "dimension" },
+    "lg": { "$value": "32px", "$type": "dimension" }
+  }
+}
