@@ -1,0 +1,18 @@
+{
+  "component": {
+    "glass": {
+      "pure": {
+        "background": { "$value": "{color.base.black.alpha.75}", "$type": "color" },
+        "backdropBlur": { "$value": "{blur.std}", "$type": "dimension" },
+        "borderColor": { "$value": "{color.base.white.alpha.10}", "$type": "color" },
+        "borderWidth": { "$value": "1px", "$type": "dimension" }
+      },
+      "panel": {
+         "background": { "$value": "{color.base.black.alpha.85}", "$type": "color" },
+         "backdropBlur": { "$value": "{blur.panel}", "$type": "dimension" },
+         "borderTopColor": { "$value": "{color.base.white.alpha.08}", "$type": "color" },
+         "borderTopWidth": { "$value": "1px", "$type": "dimension" }
+      }
+    }
+  }
+}
