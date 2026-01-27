@@ -1,0 +1,7 @@
+{
+  "backdropBlur": {
+    "glass": { "$value": "{blur.std}", "$type": "dimension" },
+    "panel": { "$value": "{blur.panel}", "$type": "dimension" },
+    "morphism": { "$value": "{blur.morphism}", "$type": "dimension" }
+  }
+}
