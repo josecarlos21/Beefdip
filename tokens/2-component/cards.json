@@ -1,0 +1,11 @@
+{
+  "component": {
+    "card": {
+      "glass": {
+        "background": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+        "backdropBlur": { "$value": "{effect.blur.std}", "$type": "dimension" },
+        "border": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+      }
+    }
+  }
+}

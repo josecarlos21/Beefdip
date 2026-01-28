@@ -1,0 +1,7 @@
+{
+  "effect": {
+    "blur": {
+      "backdrop": { "$value": "{effect.blur.std}", "$type": "dimension" }
+    }
+  }
+}
