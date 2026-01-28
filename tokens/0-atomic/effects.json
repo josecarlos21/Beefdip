@@ -1,0 +1,9 @@
+{
+  "effect": {
+    "blur": {
+      "std": { "$value": "28px", "$type": "dimension" },
+      "panel": { "$value": "32px", "$type": "dimension" },
+      "morphism": { "$value": "20px", "$type": "dimension" }
+    }
+  }
+}
