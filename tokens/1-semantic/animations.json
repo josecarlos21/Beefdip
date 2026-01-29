@@ -1,0 +1,8 @@
+{
+  "animation": {
+    "visual-pulse": { "$value": "vpulse 3s ease-in-out infinite", "$type": "string" },
+    "reveal": { "$value": "reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards", "$type": "string" },
+    "float": { "$value": "float 4s ease-in-out infinite", "$type": "string" },
+    "connector-flow": { "$value": "flow 3s linear infinite", "$type": "string" }
+  }
+}
