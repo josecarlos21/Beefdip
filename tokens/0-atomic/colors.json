@@ -1,0 +1,28 @@
+{
+  "color": {
+    "base": {
+      "orange": {
+        "400": { "$value": "#fb923c", "$type": "color" },
+        "500": { "$value": "#f97316", "$type": "color" }
+      },
+      "rose": {
+        "500": { "$value": "#f43f5e", "$type": "color" }
+      },
+      "slate": {
+        "950": { "$value": "#0a0f1e", "$type": "color" },
+        "900": { "$value": "#0f172a", "$type": "color" },
+        "800": { "$value": "#161e31", "$type": "color" },
+        "500": { "$value": "#64748b", "$type": "color" },
+        "100": { "$value": "#f1f5f9", "$type": "color" }
+      },
+      "white": { "$value": "#ffffff", "$type": "color" },
+      "black": { "$value": "#000000", "$type": "color" },
+      "transparent": { "$value": "transparent", "$type": "color" },
+      "glass": {
+        "main": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+        "light": { "$value": "rgba(255, 255, 255, 0.03)", "$type": "color" },
+        "border": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+      }
+    }
+  }
+}
