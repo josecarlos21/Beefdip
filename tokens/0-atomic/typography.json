@@ -1,0 +1,8 @@
+{
+  "typography": {
+    "fontFamily": {
+      "plusJakartaSans": { "$value": "\"Plus Jakarta Sans\", sans-serif", "$type": "fontFamily" },
+      "inter": { "$value": "Inter, sans-serif", "$type": "fontFamily" }
+    }
+  }
+}
