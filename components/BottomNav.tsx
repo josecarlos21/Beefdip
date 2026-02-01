@@ -13,7 +13,7 @@ const BottomNav: React.FC = () => {
 
   return (
     <nav 
-      className="fixed bottom-0 left-0 right-0 max-w-md mx-auto glass-panel border-t border-white/5 px-4 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl"
+      className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-component-bottom-nav-background/85 backdrop-blur-md border-t border-component-bottom-nav-border px-4 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl"
       role="navigation"
       aria-label="Navegación principal"
     >
@@ -26,8 +26,8 @@ const BottomNav: React.FC = () => {
             className={({ isActive }) => 
               `w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 relative tap-active ${
                 isActive 
-                ? 'bg-primary text-white shadow-xl shadow-primary/40 -mt-12 scale-110 border-[4px] border-background-dark' 
-                : 'text-slate-500'
+                ? 'bg-component-bottom-nav-item-active-bg text-component-bottom-nav-item-active-text shadow-xl shadow-primary/40 -mt-12 scale-110 border-[4px] border-background-dark'
+                : 'text-component-bottom-nav-item-inactive-text'
               }`
             }
           >
@@ -47,7 +47,7 @@ const BottomNav: React.FC = () => {
             to={item.path}
             aria-label={item.label}
             className={({ isActive }) => 
-              `flex flex-col items-center gap-1 transition-all duration-200 tap-active min-w-[3.5rem] ${isActive ? 'text-primary' : 'text-slate-500'}`
+              `flex flex-col items-center gap-1 transition-all duration-200 tap-active min-w-[3.5rem] ${isActive ? 'text-component-bottom-nav-item-active-bg' : 'text-component-bottom-nav-item-inactive-text'}`
             }
           >
             {({ isActive }) => (

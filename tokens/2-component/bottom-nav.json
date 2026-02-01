@@ -1,0 +1,19 @@
+{
+  "color": {
+    "component": {
+      "bottom-nav": {
+        "background": { "$value": "{color.background.surface}", "$type": "color" },
+        "border": { "$value": "{color.base.white-alpha.08}", "$type": "color" },
+        "item": {
+           "active": {
+              "bg": { "$value": "{color.primary}", "$type": "color" },
+              "text": { "$value": "{color.base.white}", "$type": "color" }
+           },
+           "inactive": {
+              "text": { "$value": "{color.base.slate.500}", "$type": "color" }
+           }
+        }
+      }
+    }
+  }
+}
