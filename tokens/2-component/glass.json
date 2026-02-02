@@ -1,0 +1,17 @@
+{
+  "glass": {
+    "pure": {
+      "background": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.std}", "$type": "blur" },
+      "border": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+    },
+    "panel": {
+      "background": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.lg}", "$type": "blur" }
+    },
+    "morphism": {
+      "background": { "$value": "rgba(239, 68, 68, 0.1)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.sm}", "$type": "blur" }
+    }
+  }
+}
