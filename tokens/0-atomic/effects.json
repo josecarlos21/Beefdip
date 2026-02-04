@@ -1,0 +1,8 @@
+{
+  "effect": {
+    "blur": {
+      "std": { "$value": "28px", "$type": "blur" },
+      "panel": { "$value": "32px", "$type": "blur" }
+    }
+  }
+}

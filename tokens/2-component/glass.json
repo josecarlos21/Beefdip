@@ -1,0 +1,16 @@
+{
+  "component": {
+    "glass": {
+      "pure": {
+        "background": { "$value": "{color.base.glass.dark}", "$type": "color" },
+        "backdropBlur": { "$value": "{effect.blur.std}", "$type": "blur" },
+        "border": { "$value": "1px solid {color.base.border.subtle}", "$type": "border" }
+      },
+      "panel": {
+        "background": { "$value": "{color.base.glass.panel}", "$type": "color" },
+        "backdropBlur": { "$value": "{effect.blur.panel}", "$type": "blur" },
+        "borderTop": { "$value": "1px solid {color.base.border.subtle}", "$type": "border" }
+      }
+    }
+  }
+}
