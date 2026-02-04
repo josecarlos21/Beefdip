@@ -1,0 +1,10 @@
+{
+  "pattern": {
+    "layout": {
+      "container": {
+        "max_width": { "$value": "1280px", "$type": "dimension" },
+        "padding": { "$value": "24px", "$type": "dimension" }
+      }
+    }
+  }
+}

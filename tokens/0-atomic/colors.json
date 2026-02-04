@@ -1,0 +1,23 @@
+{
+  "color": {
+    "base": {
+      "orange": {
+        "400": { "$value": "#fb923c", "$type": "color" }
+      },
+      "rose": {
+        "500": { "$value": "#f43f5e", "$type": "color" }
+      },
+      "blue": {
+        "950": { "$value": "#0a0f1e", "$type": "color" },
+        "900": { "$value": "#161e31", "$type": "color" }
+      },
+      "glass": {
+          "dark": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+          "panel": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" }
+      },
+      "border": {
+          "subtle": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+      }
+    }
+  }
+}

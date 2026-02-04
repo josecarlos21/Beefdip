@@ -1,0 +1,13 @@
+{
+  "context": {
+    "theme": {
+      "dark": {
+        "color": {
+             "background": {
+                "DEFAULT": { "$value": "{color.background.dark}", "$type": "color" }
+             }
+        }
+      }
+    }
+  }
+}

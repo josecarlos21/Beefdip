@@ -1,0 +1,8 @@
+{
+  "animation": {
+    "visual_pulse": { "$value": "vpulse {animation.timing.normal} {animation.curve.ease_in_out} infinite", "$type": "string" },
+    "reveal": { "$value": "reveal {animation.timing.fast} {animation.curve.reveal} forwards", "$type": "string" },
+    "float": { "$value": "float {animation.timing.slow} {animation.curve.ease_in_out} infinite", "$type": "string" },
+    "connector_flow": { "$value": "flow {animation.timing.normal} {animation.curve.linear} infinite", "$type": "string" }
+  }
+}
