@@ -1,0 +1,22 @@
+{
+  "glass": {
+    "pure": {
+      "background": { "$value": "rgba(10, 15, 30, 0.65)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.std}", "$type": "blur" },
+      "border": { "$value": "1px solid rgba(255, 255, 255, 0.1)", "$type": "border" },
+      "boxShadow": { "$value": "0 8px 32px 0 rgba(0, 0, 0, 0.37)", "$type": "shadow" }
+    },
+    "panel": {
+      "background": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.lg}", "$type": "blur" },
+      "borderTop": { "$value": "1px solid rgba(255, 255, 255, 0.12)", "$type": "border" },
+      "boxShadow": { "$value": "0 -4px 30px rgba(0, 0, 0, 0.5)", "$type": "shadow" }
+    },
+    "morphism": {
+      "background": { "$value": "rgba(239, 68, 68, 0.1)", "$type": "color" },
+      "backdropBlur": { "$value": "{effect.blur.md}", "$type": "blur" },
+      "border": { "$value": "1px solid rgba(239, 68, 68, 0.2)", "$type": "border" },
+      "boxShadow": { "$value": "0 8px 32px 0 rgba(239, 68, 68, 0.1)", "$type": "shadow" }
+    }
+  }
+}
