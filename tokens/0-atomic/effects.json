@@ -1,0 +1,9 @@
+{
+  "effect": {
+    "blur": {
+      "std": { "$value": "28px", "$type": "blur" },
+      "md": { "$value": "20px", "$type": "blur" },
+      "lg": { "$value": "32px", "$type": "blur" }
+    }
+  }
+}

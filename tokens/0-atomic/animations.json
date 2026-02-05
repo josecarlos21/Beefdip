@@ -1,0 +1,16 @@
+{
+  "animation": {
+    "timing": {
+      "fast": { "$value": "0.1s", "$type": "time" },
+      "normal": { "$value": "0.6s", "$type": "time" },
+      "slow": { "$value": "1.2s", "$type": "time" },
+      "pulse": { "$value": "3s", "$type": "time" },
+      "float": { "$value": "4s", "$type": "time" }
+    },
+    "curve": {
+      "ease_in_out": { "$value": "ease-in-out", "$type": "cubic-bezier" },
+      "ease_custom": { "$value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "$type": "cubic-bezier" },
+      "linear": { "$value": "linear", "$type": "cubic-bezier" }
+    }
+  }
+}

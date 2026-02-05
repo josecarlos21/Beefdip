@@ -1,0 +1,10 @@
+{
+  "scrim": {
+    "deep": {
+      "background": { "$value": "linear-gradient(to bottom, transparent 0%, rgba(10,15,30,0.2) 40%, rgba(10,15,30,0.95) 90%, #0a0f1e 100%)", "$type": "gradient" }
+    },
+    "top": {
+      "background": { "$value": "linear-gradient(to top, transparent 0%, rgba(10,15,30,0.7) 100%)", "$type": "gradient" }
+    }
+  }
+}
