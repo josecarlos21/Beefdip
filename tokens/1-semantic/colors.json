@@ -1,0 +1,10 @@
+{
+  "color": {
+    "primary": { "$value": "{color.base.orange.500}", "$type": "color" },
+    "accent": { "$value": "{color.base.rose.500}", "$type": "color" },
+    "background": {
+      "dark": { "$value": "{color.base.dark.900}", "$type": "color" },
+      "surface": { "$value": "{color.base.surface.800}", "$type": "color" }
+    }
+  }
+}

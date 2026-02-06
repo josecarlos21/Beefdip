@@ -1,0 +1,19 @@
+{
+  "glass": {
+    "panel": {
+      "bg": { "$value": "rgba(16, 24, 49, 0.85)", "$type": "color" },
+      "blur": { "$value": "32px", "$type": "dimension" },
+      "border": { "$value": "rgba(255, 255, 255, 0.08)", "$type": "color" }
+    },
+    "pure": {
+      "bg": { "$value": "rgba(10, 15, 30, 0.75)", "$type": "color" },
+      "blur": { "$value": "28px", "$type": "dimension" },
+      "border": { "$value": "rgba(255, 255, 255, 0.1)", "$type": "color" }
+    },
+    "morphism": {
+      "bg": { "$value": "rgba(239, 68, 68, 0.1)", "$type": "color" },
+      "blur": { "$value": "20px", "$type": "dimension" },
+      "border": { "$value": "rgba(239, 68, 68, 0.2)", "$type": "color" }
+    }
+  }
+}

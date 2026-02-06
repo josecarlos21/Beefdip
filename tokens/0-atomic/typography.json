@@ -1,0 +1,8 @@
+{
+  "font": {
+    "family": {
+      "jakarta": { "$value": "Plus Jakarta Sans", "$type": "fontFamily" },
+      "inter": { "$value": "Inter", "$type": "fontFamily" }
+    }
+  }
+}

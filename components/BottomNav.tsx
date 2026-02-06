@@ -13,7 +13,7 @@ const BottomNav: React.FC = () => {
 
   return (
     <nav 
-      className="fixed bottom-0 left-0 right-0 max-w-md mx-auto glass-panel border-t border-white/5 px-4 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl"
+      className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-glass-panel-bg backdrop-blur-glass-panel border-t border-glass-panel-border px-4 pt-3 pb-8 z-50 flex justify-between items-center rounded-t-[2.5rem] shadow-2xl"
       role="navigation"
       aria-label="Navegación principal"
     >

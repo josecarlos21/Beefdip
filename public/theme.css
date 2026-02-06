@@ -1,0 +1,54 @@
+:root {
+  --animation-semantic-visual-pulse: vpulse 3s ease-in-out infinite;
+  --animation-semantic-reveal: reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animation-semantic-float: float 4s ease-in-out infinite;
+  --animation-semantic-connector-flow: flow 3s linear infinite;
+  --animation-timing-normal: 3s;
+  --animation-timing-fast: 0.6s;
+  --animation-timing-slow: 4s;
+  --animation-curve-ease_in_out: ease-in-out;
+  --animation-curve-reveal_curve: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animation-curve-linear: linear;
+  --color-primary: #fb923c;
+  --color-accent: #f43f5e;
+  --color-background-dark: #0a0f1e;
+  --color-background-surface: #161e31;
+  --color-base-orange-500: #fb923c;
+  --color-base-rose-500: #f43f5e;
+  --color-base-dark-900: #0a0f1e;
+  --color-base-surface-800: #161e31;
+  --keyframe-vpulse: [object Object];
+  --keyframe-reveal: [object Object];
+  --keyframe-float: [object Object];
+  --keyframe-flow: [object Object];
+  --font-family-jakarta: Plus Jakarta Sans;
+  --font-family-inter: Inter;
+  --glass-panel-bg: rgba(16, 24, 49, 0.85);
+  --glass-panel-blur: 32px;
+  --glass-panel-border: rgba(255, 255, 255, 0.08);
+  --glass-pure-bg: rgba(10, 15, 30, 0.75);
+  --glass-pure-blur: 28px;
+  --glass-pure-border: rgba(255, 255, 255, 0.1);
+  --glass-morphism-bg: rgba(239, 68, 68, 0.1);
+  --glass-morphism-blur: 20px;
+  --glass-morphism-border: rgba(239, 68, 68, 0.2);
+}
+
+.glass-panel {
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(var(--glass-panel-blur));
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border);
+}
+.glass-pure {
+  background: var(--glass-pure-bg);
+  backdrop-filter: blur(var(--glass-pure-blur));
+  -webkit-backdrop-filter: blur(var(--glass-pure-blur));
+  border: 1px solid var(--glass-pure-border);
+}
+.glass-morphism {
+  background: var(--glass-morphism-bg);
+  backdrop-filter: blur(var(--glass-morphism-blur));
+  -webkit-backdrop-filter: blur(var(--glass-morphism-blur));
+  border: 1px solid var(--glass-morphism-border);
+}
